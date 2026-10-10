@@ -1,0 +1,244 @@
+{
+  "summary": {
+    "task": "dense_aggregation",
+    "n_examples": 6,
+    "oracle_accuracy": 0.3333,
+    "per_strategy_acc": {
+      "passthrough": 0.3333,
+      "compaction": 0.3333,
+      "retrieval": 0.3333,
+      "rlm": 0.3333
+    },
+    "strategy_wins": {
+      "passthrough": 5,
+      "compaction": 0,
+      "retrieval": 0,
+      "rlm": 1
+    },
+    "oracle_gain": 0.0,
+    "all_wrong_count": 4,
+    "context_lengths": [
+      4000,
+      16000,
+      64000
+    ]
+  },
+  "records": [
+    {
+      "query": "How many examples have the label 'business'?",
+      "context_len": 63395,
+      "ground_truth": "134",
+      "grades": {
+        "passthrough": false,
+        "compaction": false,
+        "retrieval": false,
+        "rlm": false
+      },
+      "best_strategy": "rlm",
+      "features": [
+        11.05715560913086,
+        3.8066625595092773,
+        0.06339500099420547,
+        0.08799999952316284,
+        1.0,
+        0.0,
+        0.0,
+        0.5397923588752747,
+        0.3333333432674408,
+        0.5
+      ],
+      "costs": {
+        "passthrough": 0.00193005,
+        "compaction": 0.00217335,
+        "retrieval": 0.00213515,
+        "rlm": 0.0016879999999999998
+      },
+      "answers": {
+        "passthrough": "There are 150 examples labeled 'business'.",
+        "compaction": "There are a total of **111 examples labeled as 'business'** in the provided dataset.",
+        "retrieval": "There are 19 examples with the label 'business'.",
+        "rlm": "The number of examples with the 'business' label is 0."
+      }
+    },
+    {
+      "query": "Which label appears most frequently among the examples?",
+      "context_len": 3882,
+      "ground_truth": "sports",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": true
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        8.264363288879395,
+        4.025351524353027,
+        0.0038819999899715185,
+        0.10999999940395355,
+        1.0,
+        0.0,
+        0.0,
+        0.5017421841621399,
+        0.2857142984867096,
+        0.2857142984867096
+      ],
+      "costs": {
+        "passthrough": 0.00012944999999999998,
+        "compaction": 0.0001302,
+        "retrieval": 0.00024904999999999996,
+        "rlm": 0.005064
+      },
+      "answers": {
+        "passthrough": "The label that appears most frequently among the examples is \"sports.\"",
+        "compaction": "The label that appears most frequently among the examples is \"sports.\"",
+        "retrieval": "The label that appears most frequently among the examples is \"sports.\"",
+        "rlm": "The label that appears most frequently among the examples is: sports"
+      }
+    },
+    {
+      "query": "Which label appears most frequently among the examples?",
+      "context_len": 15708,
+      "ground_truth": "business",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": true
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        9.661989212036133,
+        4.025351524353027,
+        0.01570799946784973,
+        0.10999999940395355,
+        1.0,
+        0.0,
+        0.0,
+        0.5302491188049316,
+        0.1428571492433548,
+        0.2857142984867096
+      ],
+      "costs": {
+        "passthrough": 0.00048629999999999995,
+        "compaction": 0.00090495,
+        "retrieval": 0.0006494,
+        "rlm": 0.004836
+      },
+      "answers": {
+        "passthrough": "The label that appears most frequently among the examples is \"business.\"",
+        "compaction": "The label that appears most frequently among the examples is **business**, with **30 occurrences**.",
+        "retrieval": "The label that appears most frequently among the examples is \"business.\"",
+        "rlm": "The label that appears most frequently is: business"
+      }
+    },
+    {
+      "query": "How many examples have the label 'business'?",
+      "context_len": 63473,
+      "ground_truth": "132",
+      "grades": {
+        "passthrough": false,
+        "compaction": false,
+        "retrieval": false,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        11.058385848999023,
+        3.8066625595092773,
+        0.06347300112247467,
+        0.08799999952316284,
+        1.0,
+        0.0,
+        0.0,
+        0.5470383167266846,
+        0.5,
+        0.5
+      ],
+      "costs": {
+        "passthrough": 0.0019279499999999999,
+        "compaction": 0.0022944000000000003,
+        "retrieval": 0.0021261500000000003,
+        "rlm": 0.006172
+      },
+      "answers": {
+        "passthrough": "There are 175 examples with the label 'business'.",
+        "compaction": "The total number of examples that have the label 'business' is **211**.",
+        "retrieval": "There are 16 examples with the label 'business'.",
+        "rlm": "The context contains 0 examples with the 'business' label."
+      }
+    },
+    {
+      "query": "What is the total score of all examples labeled 'business'?",
+      "context_len": 63186,
+      "ground_truth": "7151",
+      "grades": {
+        "passthrough": false,
+        "compaction": false,
+        "retrieval": false,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        11.053853988647461,
+        4.094344615936279,
+        0.06318599730730057,
+        0.11800000071525574,
+        1.0,
+        0.0,
+        1.0,
+        0.47887325286865234,
+        0.2857142984867096,
+        0.4285714328289032
+      ],
+      "costs": {
+        "passthrough": 0.0021368999999999997,
+        "compaction": 0.00262395,
+        "retrieval": 0.002208,
+        "rlm": 0.0031967999999999996
+      },
+      "answers": {
+        "passthrough": "To calculate the total score of all examples labeled 'business', we will sum the scores for each example with the label 'business':\n\n1 + 74 + 41 + 63 + 87 + 60 + 88 + 47 + 64 + 65 + 30 + 91 + 24 + 47 ",
+        "compaction": "The total score of all examples labeled 'business' is **1583**.",
+        "retrieval": "To compute the total score of all examples labeled 'business', let's summarize the scores from the provided text:\n\n- Example 129: Score 56\n- Example 188: Score 7\n- Example 256: Score 17\n- Example 261:",
+        "rlm": "The total score of all examples labeled 'business' is: 0"
+      }
+    },
+    {
+      "query": "What is the total score of all examples labeled 'world'?",
+      "context_len": 15743,
+      "ground_truth": "2007",
+      "grades": {
+        "passthrough": false,
+        "compaction": false,
+        "retrieval": false,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        9.664215087890625,
+        4.043051242828369,
+        0.01574300043284893,
+        0.1120000034570694,
+        1.0,
+        0.0,
+        1.0,
+        0.4748201370239258,
+        0.4285714328289032,
+        0.4285714328289032
+      ],
+      "costs": {
+        "passthrough": 0.0006935999999999999,
+        "compaction": 0.0010278,
+        "retrieval": 0.00078665,
+        "rlm": 0.0681504
+      },
+      "answers": {
+        "passthrough": "To find the total score of all examples labeled \"world,\" we can sum the scores of those specific examples provided.\n\nThe scores of the examples labeled \"world\" are:\n\n1. Example 4: Score: 1\n2. Example ",
+        "compaction": "The total score of all examples labeled 'world' is **1,773**.",
+        "retrieval": "To calculate the total score of all examples labeled 'world', let's add the scores associated with those examples:\n\n- Example 10: Score 71\n- Example 11: Score 53\n- Example 15: Score 55\n- Example 44: S",
+        "rlm": "[MAX_ITERATIONS_REACHED]"
+      }
+    }
+  ]
+}

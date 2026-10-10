@@ -1,0 +1,205 @@
+{
+  "summary": {
+    "n_examples": 5,
+    "oracle_accuracy": 1.0,
+    "per_strategy_acc": {
+      "passthrough": 1.0,
+      "compaction": 1.0,
+      "retrieval": 1.0,
+      "rlm": 0.6
+    },
+    "strategy_wins": {
+      "passthrough": 3,
+      "compaction": 0,
+      "retrieval": 0,
+      "rlm": 2
+    },
+    "oracle_gain": 0.1,
+    "all_wrong_count": 0,
+    "context_lengths": [
+      4000
+    ]
+  },
+  "records": [
+    {
+      "query": "What is the hidden password?",
+      "context_len": 4001,
+      "ground_truth": "BlueMoon_99!",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        8.294549942016602,
+        3.367295742034912,
+        0.004000999964773655,
+        0.0560000017285347,
+        1.0,
+        0.0,
+        1.0,
+        0.1899999976158142,
+        0.0,
+        0.0
+      ],
+      "costs": {
+        "passthrough": 0.00012465,
+        "compaction": 0.0001248,
+        "retrieval": 0.00025534999999999995,
+        "rlm": 8.145e-05
+      },
+      "answers": {
+        "passthrough": "The hidden password is: BlueMoon_99!",
+        "compaction": "The hidden password is: BlueMoon_99!",
+        "retrieval": "The hidden password is: BlueMoon_99!",
+        "rlm": "is:"
+      }
+    },
+    {
+      "query": "What is the hidden password?",
+      "context_len": 4001,
+      "ground_truth": "BlueMoon_99!",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": true
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        8.294549942016602,
+        3.367295742034912,
+        0.004000999964773655,
+        0.0560000017285347,
+        1.0,
+        0.0,
+        1.0,
+        0.17981073260307312,
+        0.0,
+        0.0
+      ],
+      "costs": {
+        "passthrough": 0.0001278,
+        "compaction": 0.00012795,
+        "retrieval": 0.00026164999999999994,
+        "rlm": 0.00031065
+      },
+      "answers": {
+        "passthrough": "The hidden password is: BlueMoon_99!",
+        "compaction": "The hidden password is: BlueMoon_99!.",
+        "retrieval": "The hidden password is: BlueMoon_99!",
+        "rlm": "BlueMoon_99!"
+      }
+    },
+    {
+      "query": "What is the target value?",
+      "context_len": 4001,
+      "ground_truth": "1.618033988",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": true
+      },
+      "best_strategy": "rlm",
+      "features": [
+        8.294549942016602,
+        3.25809645652771,
+        0.004000999964773655,
+        0.05000000074505806,
+        1.0,
+        0.0,
+        1.0,
+        0.21328671276569366,
+        0.5,
+        0.5
+      ],
+      "costs": {
+        "passthrough": 0.00012315,
+        "compaction": 0.0001227,
+        "retrieval": 0.00024935,
+        "rlm": 0.0001035
+      },
+      "answers": {
+        "passthrough": "The target value is: 1.618033988.",
+        "compaction": "The target value is 1.618033988.",
+        "retrieval": "The target value is: 1.618033988.",
+        "rlm": "1.618033988"
+      }
+    },
+    {
+      "query": "What is the treasure location?",
+      "context_len": 4001,
+      "ground_truth": "under the old oak tree by the river bend",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": true
+      },
+      "best_strategy": "rlm",
+      "features": [
+        8.294549942016602,
+        3.4339871406555176,
+        0.004000999964773655,
+        0.05999999865889549,
+        1.0,
+        0.0,
+        1.0,
+        0.2175324708223343,
+        0.5,
+        0.5
+      ],
+      "costs": {
+        "passthrough": 0.00012989999999999999,
+        "compaction": 0.00013005,
+        "retrieval": 0.00026405,
+        "rlm": 0.0001158
+      },
+      "answers": {
+        "passthrough": "The treasure location is under the old oak tree by the river bend.",
+        "compaction": "The treasure location is under the old oak tree by the river bend.",
+        "retrieval": "The treasure location is: under the old oak tree by the river bend.",
+        "rlm": "under the old oak tree by the river bend"
+      }
+    },
+    {
+      "query": "What is the meeting time?",
+      "context_len": 4002,
+      "ground_truth": "3:47 PM on Thursday",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        8.2947998046875,
+        3.25809645652771,
+        0.004002000205218792,
+        0.05000000074505806,
+        1.0,
+        0.0,
+        1.0,
+        0.17554858326911926,
+        0.0,
+        0.0
+      ],
+      "costs": {
+        "passthrough": 0.0001308,
+        "compaction": 0.00013095,
+        "retrieval": 0.0002678,
+        "rlm": 0.0007046999999999999
+      },
+      "answers": {
+        "passthrough": "The meeting time is 3:47 PM on Thursday.",
+        "compaction": "The meeting time is 3:47 PM on Thursday.",
+        "retrieval": "The meeting time is 3:47 PM on Thursday.",
+        "rlm": "The meeting time may be 3:47 PM on a Thursday, but please verify the context for confirmation."
+      }
+    }
+  ]
+}

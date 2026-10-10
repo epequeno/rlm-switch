@@ -1,0 +1,84 @@
+{
+  "rule_based": {
+    "accuracy": 0.195,
+    "avg_cost_usd": 0.00239,
+    "strategy_distribution": {
+      "passthrough": 0.215,
+      "compaction": 0.63,
+      "retrieval": 0.155,
+      "rlm": 0.0
+    },
+    "n_examples": 200
+  },
+  "bandit": {
+    "accuracy": 0.33,
+    "avg_cost_usd": 0.00558,
+    "strategy_distribution": {
+      "passthrough": 0.245,
+      "compaction": 0.235,
+      "retrieval": 0.255,
+      "rlm": 0.265
+    },
+    "n_examples": 200
+  },
+  "classifier": {
+    "accuracy": 0.72,
+    "avg_cost_usd": 0.008631,
+    "strategy_distribution": {
+      "passthrough": 0.315,
+      "compaction": 0.0,
+      "retrieval": 0.0,
+      "rlm": 0.685
+    },
+    "n_examples": 200
+  },
+  "always_passthrough": {
+    "accuracy": 0.235,
+    "avg_cost_usd": 0.002082,
+    "strategy_distribution": {
+      "passthrough": 1.0,
+      "compaction": 0.0,
+      "retrieval": 0.0,
+      "rlm": 0.0
+    },
+    "n_examples": 200
+  },
+  "always_compaction": {
+    "accuracy": 0.205,
+    "avg_cost_usd": 0.002372,
+    "strategy_distribution": {
+      "passthrough": 0.0,
+      "compaction": 1.0,
+      "retrieval": 0.0,
+      "rlm": 0.0
+    },
+    "n_examples": 200
+  },
+  "always_retrieval": {
+    "accuracy": 0.165,
+    "avg_cost_usd": 0.002358,
+    "strategy_distribution": {
+      "passthrough": 0.0,
+      "compaction": 0.0,
+      "retrieval": 1.0,
+      "rlm": 0.0
+    },
+    "n_examples": 200
+  },
+  "always_rlm": {
+    "accuracy": 0.76,
+    "avg_cost_usd": 0.01488,
+    "strategy_distribution": {
+      "passthrough": 0.0,
+      "compaction": 0.0,
+      "retrieval": 0.0,
+      "rlm": 1.0
+    },
+    "n_examples": 200
+  },
+  "oracle": {
+    "accuracy": 0.84,
+    "avg_cost_usd": 0.003553,
+    "n_examples": 200
+  }
+}

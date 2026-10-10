@@ -1,0 +1,98 @@
+{
+  "summary": {
+    "task": "dense_aggregation",
+    "n_examples": 2,
+    "oracle_accuracy": 0.5,
+    "per_strategy_acc": {
+      "passthrough": 0.5,
+      "compaction": 0.5,
+      "retrieval": 0.5,
+      "rlm": 0.0
+    },
+    "strategy_wins": {
+      "passthrough": 1,
+      "compaction": 0,
+      "retrieval": 0,
+      "rlm": 1
+    },
+    "oracle_gain": 0.125,
+    "all_wrong_count": 1,
+    "context_lengths": [
+      4000
+    ]
+  },
+  "records": [
+    {
+      "query": "How many examples have the label 'business'?",
+      "context_len": 3904,
+      "ground_truth": "7",
+      "grades": {
+        "passthrough": false,
+        "compaction": false,
+        "retrieval": false,
+        "rlm": false
+      },
+      "best_strategy": "rlm",
+      "features": [
+        8.270012855529785,
+        3.8066625595092773,
+        0.003903999924659729,
+        0.08799999952316284,
+        1.0,
+        0.0,
+        0.0,
+        0.5051546096801758,
+        0.1666666716337204,
+        0.1666666716337204
+      ],
+      "costs": {
+        "passthrough": 0.00013035,
+        "compaction": 0.0001305,
+        "retrieval": 0.00025219999999999995,
+        "rlm": 0.0
+      },
+      "answers": {
+        "passthrough": "There are 12 examples with the label 'business'.",
+        "compaction": "There are 8 examples with the label 'business'.",
+        "retrieval": "There are 9 examples that have the label 'business'.",
+        "rlm": "[ERROR: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3.5-haiku.', 'code': 404}, 'user_id': 'user_39jTBMn8MQfnXIcLDpfV0ZJ4APm'}]"
+      }
+    },
+    {
+      "query": "Which label appears most frequently among the examples?",
+      "context_len": 3873,
+      "ground_truth": "world",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        8.262042999267578,
+        4.025351524353027,
+        0.003872999921441078,
+        0.10999999940395355,
+        1.0,
+        0.0,
+        0.0,
+        0.5384615659713745,
+        0.2857142984867096,
+        0.2857142984867096
+      ],
+      "costs": {
+        "passthrough": 0.00012915,
+        "compaction": 0.00012989999999999999,
+        "retrieval": 0.00024904999999999996,
+        "rlm": 0.0
+      },
+      "answers": {
+        "passthrough": "The label that appears most frequently among the examples is \"world.\"",
+        "compaction": "The label \"world\" appears most frequently among the examples provided.",
+        "retrieval": "The label that appears most frequently among the examples is \"world.\"",
+        "rlm": "[ERROR: Error code: 404 - {'error': {'message': 'No endpoints found for anthropic/claude-3.5-haiku.', 'code': 404}, 'user_id': 'user_39jTBMn8MQfnXIcLDpfV0ZJ4APm'}]"
+      }
+    }
+  ]
+}

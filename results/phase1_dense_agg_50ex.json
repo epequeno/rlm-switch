@@ -1,0 +1,1828 @@
+{
+  "summary": {
+    "task": "dense_aggregation",
+    "n_examples": 50,
+    "oracle_accuracy": 0.96,
+    "per_strategy_acc": {
+      "passthrough": 0.4,
+      "compaction": 0.38,
+      "retrieval": 0.42,
+      "rlm": 0.8
+    },
+    "strategy_wins": {
+      "passthrough": 16,
+      "compaction": 8,
+      "retrieval": 2,
+      "rlm": 24
+    },
+    "oracle_gain": 0.46,
+    "all_wrong_count": 2,
+    "context_lengths": [
+      4000,
+      16000,
+      64000
+    ]
+  },
+  "records": [
+    {
+      "query": "How many examples have the label 'world'?",
+      "context_len": 77231,
+      "ground_truth": "154",
+      "grades": {
+        "passthrough": false,
+        "compaction": false,
+        "retrieval": false,
+        "rlm": true
+      },
+      "best_strategy": "rlm",
+      "features": [
+        11.254569053649902,
+        3.7376697063446045,
+        0.07723099738359451,
+        0.0820000022649765,
+        1.0,
+        0.0,
+        0.0,
+        0.5836575627326965,
+        0.3333333432674408,
+        0.5
+      ],
+      "costs": {
+        "passthrough": 0.00289305,
+        "compaction": 0.0032397,
+        "retrieval": 0.0032476,
+        "rlm": 0.0061984
+      },
+      "answers": {
+        "passthrough": "There are 152 examples with the label 'world'.",
+        "compaction": "There are **237 entries** labeled as 'world'.",
+        "retrieval": "There are 19 examples with the label 'world'.",
+        "rlm": "The number of examples with the 'world' label is: 154"
+      }
+    },
+    {
+      "query": "Which label appears most frequently among the examples?",
+      "context_len": 19226,
+      "ground_truth": "business",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": true
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        9.864070892333984,
+        4.025351524353027,
+        0.01922599971294403,
+        0.10999999940395355,
+        1.0,
+        0.0,
+        0.0,
+        0.48473283648490906,
+        0.2857142984867096,
+        0.2857142984867096
+      ],
+      "costs": {
+        "passthrough": 0.0007283999999999999,
+        "compaction": 0.0009318,
+        "retrieval": 0.0009285999999999999,
+        "rlm": 0.002776
+      },
+      "answers": {
+        "passthrough": "The label that appears most frequently among the examples is \"business\".",
+        "compaction": "The label that appears most frequently among the examples is **Business**, with a total of **48 occurrences**.",
+        "retrieval": "The label \"business\" appears most frequently among the examples provided.",
+        "rlm": "The label that appears most frequently among the examples is: business"
+      }
+    },
+    {
+      "query": "What is the total score of all examples labeled 'sports'?",
+      "context_len": 77290,
+      "ground_truth": "7223",
+      "grades": {
+        "passthrough": false,
+        "compaction": false,
+        "retrieval": false,
+        "rlm": true
+      },
+      "best_strategy": "rlm",
+      "features": [
+        11.255332946777344,
+        4.060442924499512,
+        0.07728999853134155,
+        0.11400000005960464,
+        1.0,
+        0.0,
+        1.0,
+        0.5490196347236633,
+        0.4285714328289032,
+        0.4285714328289032
+      ],
+      "costs": {
+        "passthrough": 0.00318975,
+        "compaction": 0.0033401999999999998,
+        "retrieval": 0.0033652,
+        "rlm": 0.0034184000000000003
+      },
+      "answers": {
+        "passthrough": "To find the total score of all examples labeled 'sports', we will sum the scores provided for each sports label in the dataset.\n\nThe scores for sports examples are as follows:\n- 26\n- 14\n- 32\n- 82\n- 96",
+        "compaction": "The total score of all examples labeled 'sports' is **2137**.",
+        "retrieval": "To calculate the total score of all examples labeled 'sports', we will sum the scores associated with each entry labeled 'sports':\n\n- Score 2\n- Score 79\n- Score 18\n- Score 88\n- Score 57\n- Score 82\n- S",
+        "rlm": "7223"
+      }
+    },
+    {
+      "query": "How many examples have the label 'technology'?",
+      "context_len": 77072,
+      "ground_truth": "140",
+      "grades": {
+        "passthrough": false,
+        "compaction": false,
+        "retrieval": false,
+        "rlm": true
+      },
+      "best_strategy": "rlm",
+      "features": [
+        11.252508163452148,
+        3.8501474857330322,
+        0.07707200199365616,
+        0.09200000017881393,
+        1.0,
+        0.0,
+        0.0,
+        0.48249027132987976,
+        0.3333333432674408,
+        0.5
+      ],
+      "costs": {
+        "passthrough": 0.0028862999999999996,
+        "compaction": 0.004174499999999999,
+        "retrieval": 0.00323875,
+        "rlm": 0.0015047999999999997
+      },
+      "answers": {
+        "passthrough": "There are 103 examples with the label 'technology'.",
+        "compaction": "There are **80** instances in the provided text that have the label 'technology'.",
+        "retrieval": "There are 14 examples with the label 'technology'.",
+        "rlm": "The number of examples with the 'technology' label is 140."
+      }
+    },
+    {
+      "query": "How many examples have the label 'sports'?",
+      "context_len": 4656,
+      "ground_truth": "12",
+      "grades": {
+        "passthrough": false,
+        "compaction": false,
+        "retrieval": true,
+        "rlm": true
+      },
+      "best_strategy": "retrieval",
+      "features": [
+        8.446126937866211,
+        3.761200189590454,
+        0.004656000062823296,
+        0.08399999886751175,
+        1.0,
+        0.0,
+        0.0,
+        0.4743083119392395,
+        0.1666666716337204,
+        0.1666666716337204
+      ],
+      "costs": {
+        "passthrough": 0.00018644999999999998,
+        "compaction": 0.00018659999999999998,
+        "retrieval": 0.00037779999999999997,
+        "rlm": 0.005736799999999999
+      },
+      "answers": {
+        "passthrough": "There are 14 examples with the label 'sports'.",
+        "compaction": "There are 10 examples with the label 'sports'.",
+        "retrieval": "There are 12 examples that have the label 'sports'.",
+        "rlm": "The dataset contains 12 examples with the 'sports' label."
+      }
+    },
+    {
+      "query": "Which label appears most frequently among the examples?",
+      "context_len": 4737,
+      "ground_truth": "world",
+      "grades": {
+        "passthrough": false,
+        "compaction": false,
+        "retrieval": false,
+        "rlm": false
+      },
+      "best_strategy": "compaction",
+      "features": [
+        8.463370323181152,
+        4.025351524353027,
+        0.004736999981105328,
+        0.10999999940395355,
+        1.0,
+        0.0,
+        0.0,
+        0.4630350172519684,
+        0.2857142984867096,
+        0.2857142984867096
+      ],
+      "costs": {
+        "passthrough": 0.00018974999999999998,
+        "compaction": 0.0001893,
+        "retrieval": 0.00038065,
+        "rlm": 0.0041944
+      },
+      "answers": {
+        "passthrough": "The label that appears most frequently among the examples is \"business.\"",
+        "compaction": "The \"business\" label appears most frequently among the examples.",
+        "retrieval": "The label that appears most frequently among the examples is \"business.\"",
+        "rlm": "The label that appears most frequently is: business"
+      }
+    },
+    {
+      "query": "How many examples have the label 'sports'?",
+      "context_len": 4740,
+      "ground_truth": "13",
+      "grades": {
+        "passthrough": false,
+        "compaction": false,
+        "retrieval": false,
+        "rlm": true
+      },
+      "best_strategy": "rlm",
+      "features": [
+        8.464003562927246,
+        3.761200189590454,
+        0.004739999771118164,
+        0.08399999886751175,
+        1.0,
+        0.0,
+        0.0,
+        0.5314960479736328,
+        0.5,
+        0.5
+      ],
+      "costs": {
+        "passthrough": 0.00018899999999999999,
+        "compaction": 0.00018795,
+        "retrieval": 0.00037825,
+        "rlm": 0.0029728
+      },
+      "answers": {
+        "passthrough": "There are 14 examples that have the label 'sports'.",
+        "compaction": "There are 12 examples with the label 'sports'.",
+        "retrieval": "There are 15 examples with the label 'sports'.",
+        "rlm": "The number of examples with the 'sports' label is: 13"
+      }
+    },
+    {
+      "query": "Which label appears most frequently among the examples?",
+      "context_len": 77044,
+      "ground_truth": "business",
+      "grades": {
+        "passthrough": true,
+        "compaction": false,
+        "retrieval": true,
+        "rlm": true
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        11.252144813537598,
+        4.025351524353027,
+        0.07704400271177292,
+        0.10999999940395355,
+        1.0,
+        0.0,
+        0.0,
+        0.5077519416809082,
+        0.2857142984867096,
+        0.2857142984867096
+      ],
+      "costs": {
+        "passthrough": 0.0028848,
+        "compaction": 0.00302055,
+        "retrieval": 0.00323455,
+        "rlm": 0.0061136
+      },
+      "answers": {
+        "passthrough": "The \"business\" label appears most frequently among the examples.",
+        "compaction": "The label that appears most frequently among the examples is **\"world\"**, with 171 occurrences.",
+        "retrieval": "The label that appears most frequently among the examples is \"business\".",
+        "rlm": "The most frequent label is: business"
+      }
+    },
+    {
+      "query": "What is the total score of all examples labeled 'sports'?",
+      "context_len": 77078,
+      "ground_truth": "6636",
+      "grades": {
+        "passthrough": false,
+        "compaction": false,
+        "retrieval": false,
+        "rlm": true
+      },
+      "best_strategy": "rlm",
+      "features": [
+        11.252586364746094,
+        4.060442924499512,
+        0.07707799971103668,
+        0.11400000005960464,
+        1.0,
+        0.0,
+        1.0,
+        0.4724409580230713,
+        0.2857142984867096,
+        0.4285714328289032
+      ],
+      "costs": {
+        "passthrough": 0.0031828499999999997,
+        "compaction": 0.0033219,
+        "retrieval": 0.00335245,
+        "rlm": 0.0026911999999999995
+      },
+      "answers": {
+        "passthrough": "To calculate the total score of all examples labeled 'sports', we will sum the scores for each item that has the label 'sports'.\n\nHere are the individual scores for items labeled 'sports':\n- 3\n- 74\n- ",
+        "compaction": "The total score of all examples labeled 'sports' is **3197**.",
+        "retrieval": "To calculate the total score of all examples labeled 'sports', we will sum the scores of each instance with the label 'sports' from the provided context.\n\nHere are the scores for each labeled 'sports'",
+        "rlm": "6636"
+      }
+    },
+    {
+      "query": "What is the total score of all examples labeled 'technology'?",
+      "context_len": 77044,
+      "ground_truth": "6979",
+      "grades": {
+        "passthrough": false,
+        "compaction": false,
+        "retrieval": false,
+        "rlm": true
+      },
+      "best_strategy": "rlm",
+      "features": [
+        11.252144813537598,
+        4.127134323120117,
+        0.07704400271177292,
+        0.12200000137090683,
+        1.0,
+        0.0,
+        1.0,
+        0.5390625,
+        0.4285714328289032,
+        0.4285714328289032
+      ],
+      "costs": {
+        "passthrough": 0.00318945,
+        "compaction": 0.00367815,
+        "retrieval": 0.00337915,
+        "rlm": 0.0049768
+      },
+      "answers": {
+        "passthrough": "To calculate the total score of all examples labeled \"technology,\" we can sum the scores provided for each relevant example. Here are the scores for each example labeled \"technology\":\n\n1. 36\n2. 7\n3. 1",
+        "compaction": "The total score of all examples labeled 'technology' is **2954**.",
+        "retrieval": "To calculate the total score of all examples labeled 'technology', we need to sum the scores for each of the relevant entries.\n\nHere are the scores for each 'technology' labeled example:\n\n- {\"score\": ",
+        "rlm": "The total score of all 'technology' examples is: 6979"
+      }
+    },
+    {
+      "query": "Which label appears most frequently among the examples?",
+      "context_len": 4707,
+      "ground_truth": "world",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": true
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        8.457018852233887,
+        4.025351524353027,
+        0.004707000218331814,
+        0.10999999940395355,
+        1.0,
+        0.0,
+        0.0,
+        0.5038461685180664,
+        0.1428571492433548,
+        0.1428571492433548
+      ],
+      "costs": {
+        "passthrough": 0.00018929999999999997,
+        "compaction": 0.00018944999999999997,
+        "retrieval": 0.00037854999999999996,
+        "rlm": 0.002784
+      },
+      "answers": {
+        "passthrough": "The label that appears most frequently among the examples is \"world.\"",
+        "compaction": "The label that appears most frequently among the examples is \"world.\"",
+        "retrieval": "The label that appears most frequently among the examples is \"world.\"",
+        "rlm": "The label that appears most frequently is: world"
+      }
+    },
+    {
+      "query": "How many examples have the label 'world'?",
+      "context_len": 77195,
+      "ground_truth": "148",
+      "grades": {
+        "passthrough": false,
+        "compaction": false,
+        "retrieval": false,
+        "rlm": true
+      },
+      "best_strategy": "rlm",
+      "features": [
+        11.25410270690918,
+        3.7376697063446045,
+        0.07719500362873077,
+        0.0820000022649765,
+        1.0,
+        0.0,
+        0.0,
+        0.5568627715110779,
+        0.5,
+        0.5
+      ],
+      "costs": {
+        "passthrough": 0.0028893,
+        "compaction": 0.0031527,
+        "retrieval": 0.00324055,
+        "rlm": 0.0022015999999999997
+      },
+      "answers": {
+        "passthrough": "There are 205 examples that have the label 'world'.",
+        "compaction": "There are a total of **185 instances** that have the label 'world'.",
+        "retrieval": "There are 20 examples with the label 'world'.",
+        "rlm": "The number of examples with the label 'world' is: 148"
+      }
+    },
+    {
+      "query": "How many examples have the label 'technology'?",
+      "context_len": 4736,
+      "ground_truth": "7",
+      "grades": {
+        "passthrough": true,
+        "compaction": false,
+        "retrieval": false,
+        "rlm": true
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        8.463159561157227,
+        3.8501474857330322,
+        0.004736000206321478,
+        0.09200000017881393,
+        1.0,
+        0.0,
+        0.0,
+        0.47265625,
+        0.3333333432674408,
+        0.3333333432674408
+      ],
+      "costs": {
+        "passthrough": 0.00018869999999999998,
+        "compaction": 0.00018945,
+        "retrieval": 0.0003817,
+        "rlm": 0.0017528
+      },
+      "answers": {
+        "passthrough": "There are 7 examples with the label 'technology'.",
+        "compaction": "There are 10 examples with the label 'technology'.",
+        "retrieval": "There are 13 examples that have the label 'technology'.",
+        "rlm": "The number of examples with the 'technology' label is: 7"
+      }
+    },
+    {
+      "query": "Which label appears most frequently among the examples?",
+      "context_len": 19119,
+      "ground_truth": "technology",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": true
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        9.858489990234375,
+        4.025351524353027,
+        0.01911900006234646,
+        0.10999999940395355,
+        1.0,
+        0.0,
+        0.0,
+        0.4920634925365448,
+        0.1428571492433548,
+        0.2857142984867096
+      ],
+      "costs": {
+        "passthrough": 0.00072825,
+        "compaction": 0.0010755,
+        "retrieval": 0.00095725,
+        "rlm": 0.004368
+      },
+      "answers": {
+        "passthrough": "The label that appears most frequently among the examples is \"technology.\"",
+        "compaction": "There is a tie among all labels\u2014**Business**, **World**, **Technology**, and **Sports**\u2014as each appears **20 times** in the dataset.",
+        "retrieval": "The label that appears most frequently among the examples is \"technology.\"",
+        "rlm": "The most frequent label is: technology"
+      }
+    },
+    {
+      "query": "Which label appears most frequently among the examples?",
+      "context_len": 77313,
+      "ground_truth": "business",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        11.255630493164062,
+        4.025351524353027,
+        0.07731299847364426,
+        0.10999999940395355,
+        1.0,
+        0.0,
+        0.0,
+        0.545098066329956,
+        0.2857142984867096,
+        0.2857142984867096
+      ],
+      "costs": {
+        "passthrough": 0.00289005,
+        "compaction": 0.0031608,
+        "retrieval": 0.0032413,
+        "rlm": 0.076436
+      },
+      "answers": {
+        "passthrough": "The label that appears most frequently among the examples is \"business.\"",
+        "compaction": "The label that appears most frequently among the examples is **Business**, with a total of 163 instances.",
+        "retrieval": "The label \"business\" appears most frequently among the examples provided.",
+        "rlm": "[MAX_ITERATIONS_REACHED]"
+      }
+    },
+    {
+      "query": "Which label appears most frequently among the examples?",
+      "context_len": 19174,
+      "ground_truth": "technology",
+      "grades": {
+        "passthrough": false,
+        "compaction": false,
+        "retrieval": false,
+        "rlm": true
+      },
+      "best_strategy": "rlm",
+      "features": [
+        9.86136245727539,
+        4.025351524353027,
+        0.01917400024831295,
+        0.10999999940395355,
+        1.0,
+        0.0,
+        0.0,
+        0.45098039507865906,
+        0.1428571492433548,
+        0.2857142984867096
+      ],
+      "costs": {
+        "passthrough": 0.0007275,
+        "compaction": 0.0011136,
+        "retrieval": 0.0009266499999999999,
+        "rlm": 0.0071664
+      },
+      "answers": {
+        "passthrough": "The label \"sports\" appears most frequently among the examples.",
+        "compaction": "The label that appears most frequently among the examples is **sports**, with a total of **40 occurrences**.",
+        "retrieval": "The label that appears most frequently among the examples is \"business.\"",
+        "rlm": "The label that appears most frequently among the examples is: technology"
+      }
+    },
+    {
+      "query": "Which label appears most frequently among the examples?",
+      "context_len": 19287,
+      "ground_truth": "business",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        9.86723804473877,
+        4.025351524353027,
+        0.019286999478936195,
+        0.10999999940395355,
+        1.0,
+        0.0,
+        0.0,
+        0.45136186480522156,
+        0.1428571492433548,
+        0.1428571492433548
+      ],
+      "costs": {
+        "passthrough": 0.0007317,
+        "compaction": 0.0008593499999999999,
+        "retrieval": 0.0009653499999999999,
+        "rlm": 0.0713552
+      },
+      "answers": {
+        "passthrough": "The label that appears most frequently among the examples is \"business.\"",
+        "compaction": "The label that appears most frequently among the examples is **business**, with a total of 49 instances.",
+        "retrieval": "The label that appears most frequently among the examples is \"business.\"",
+        "rlm": "[MAX_ITERATIONS_REACHED]"
+      }
+    },
+    {
+      "query": "Which label appears most frequently among the examples?",
+      "context_len": 19195,
+      "ground_truth": "world",
+      "grades": {
+        "passthrough": false,
+        "compaction": false,
+        "retrieval": false,
+        "rlm": true
+      },
+      "best_strategy": "rlm",
+      "features": [
+        9.862457275390625,
+        4.025351524353027,
+        0.01919499970972538,
+        0.10999999940395355,
+        1.0,
+        0.0,
+        0.0,
+        0.545098066329956,
+        0.2857142984867096,
+        0.2857142984867096
+      ],
+      "costs": {
+        "passthrough": 0.0007297499999999999,
+        "compaction": 0.00084525,
+        "retrieval": 0.0009618999999999999,
+        "rlm": 0.0049928
+      },
+      "answers": {
+        "passthrough": "The label that appears most frequently among the examples is \"technology.\"",
+        "compaction": "The **Business** label appears most frequently among the examples, with a total of 35 occurrences.",
+        "retrieval": "The label that appears most frequently among the examples is \"business.\"",
+        "rlm": "The label that appears most frequently is 'world'."
+      }
+    },
+    {
+      "query": "Which label appears most frequently among the examples?",
+      "context_len": 4775,
+      "ground_truth": "technology",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        8.471358299255371,
+        4.025351524353027,
+        0.004774999804794788,
+        0.10999999940395355,
+        1.0,
+        0.0,
+        0.0,
+        0.5634920597076416,
+        0.1428571492433548,
+        0.1428571492433548
+      ],
+      "costs": {
+        "passthrough": 0.00018899999999999999,
+        "compaction": 0.00018915,
+        "retrieval": 0.000379,
+        "rlm": 0.0760568
+      },
+      "answers": {
+        "passthrough": "The label that appears most frequently among the examples is \"technology.\"",
+        "compaction": "The label that appears most frequently among the examples is \"technology.\"",
+        "retrieval": "The label that appears most frequently among the examples is \"technology.\"",
+        "rlm": "[MAX_ITERATIONS_REACHED]"
+      }
+    },
+    {
+      "query": "How many examples have the label 'world'?",
+      "context_len": 4764,
+      "ground_truth": "9",
+      "grades": {
+        "passthrough": false,
+        "compaction": false,
+        "retrieval": false,
+        "rlm": true
+      },
+      "best_strategy": "rlm",
+      "features": [
+        8.469053268432617,
+        3.7376697063446045,
+        0.004763999953866005,
+        0.0820000022649765,
+        1.0,
+        0.0,
+        0.0,
+        0.4841269850730896,
+        0.1666666716337204,
+        0.1666666716337204
+      ],
+      "costs": {
+        "passthrough": 0.00018855,
+        "compaction": 0.0001881,
+        "retrieval": 0.000379,
+        "rlm": 0.0099744
+      },
+      "answers": {
+        "passthrough": "There are 11 examples with the label 'world'.",
+        "compaction": "There are 10 examples with the label 'world'.",
+        "retrieval": "There are 10 examples with the label 'world'.",
+        "rlm": "The number of examples with the label 'world' is: 9"
+      }
+    },
+    {
+      "query": "What is the total score of all examples labeled 'world'?",
+      "context_len": 77084,
+      "ground_truth": "8588",
+      "grades": {
+        "passthrough": false,
+        "compaction": false,
+        "retrieval": false,
+        "rlm": true
+      },
+      "best_strategy": "rlm",
+      "features": [
+        11.252663612365723,
+        4.043051242828369,
+        0.0770839974284172,
+        0.1120000034570694,
+        1.0,
+        0.0,
+        1.0,
+        0.4606299102306366,
+        0.4285714328289032,
+        0.4285714328289032
+      ],
+      "costs": {
+        "passthrough": 0.0031156499999999998,
+        "compaction": 0.00377805,
+        "retrieval": 0.0033806500000000002,
+        "rlm": 0.0052952
+      },
+      "answers": {
+        "passthrough": "To calculate the total score of all examples labeled 'world', we need to sum the scores associated with each entry labeled 'world'. Here\u2019s the breakdown of the scores:\n\n1. 41\n2. 46\n3. 67\n4. 57\n5. 29\n6",
+        "compaction": "The total score of all examples labeled 'world' is **3700**.",
+        "retrieval": "To find the total score of all examples labeled 'world', we will sum the scores associated with each 'world' labeled entry:\n\n1. Score: 11 (id: 101)\n2. Score: 19 (id: 102)\n3. Score: 37 (id: 104)\n4. Sco",
+        "rlm": "The total score of all examples labeled 'world' is: 8588"
+      }
+    },
+    {
+      "query": "Which label appears most frequently among the examples?",
+      "context_len": 4759,
+      "ground_truth": "sports",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": true
+      },
+      "best_strategy": "compaction",
+      "features": [
+        8.468003273010254,
+        4.025351524353027,
+        0.004759000148624182,
+        0.10999999940395355,
+        1.0,
+        0.0,
+        0.0,
+        0.5461538434028625,
+        0.2857142984867096,
+        0.2857142984867096
+      ],
+      "costs": {
+        "passthrough": 0.00018959999999999997,
+        "compaction": 0.00018915,
+        "retrieval": 0.00037975,
+        "rlm": 0.0029024
+      },
+      "answers": {
+        "passthrough": "The label that appears most frequently among the examples is \"sports.\"",
+        "compaction": "The label that appears most frequently among the examples is \"sports.\"",
+        "retrieval": "The label that appears most frequently among the examples is \"sports.\"",
+        "rlm": "The label that appears most frequently is: sports"
+      }
+    },
+    {
+      "query": "What is the total score of all examples labeled 'business'?",
+      "context_len": 4717,
+      "ground_truth": "471",
+      "grades": {
+        "passthrough": false,
+        "compaction": false,
+        "retrieval": false,
+        "rlm": true
+      },
+      "best_strategy": "rlm",
+      "features": [
+        8.459139823913574,
+        4.094344615936279,
+        0.00471699982881546,
+        0.11800000071525574,
+        1.0,
+        0.0,
+        1.0,
+        0.5214007496833801,
+        0.2857142984867096,
+        0.1428571492433548
+      ],
+      "costs": {
+        "passthrough": 0.0002805,
+        "compaction": 0.00026084999999999997,
+        "retrieval": 0.00047515000000000003,
+        "rlm": 0.0023112
+      },
+      "answers": {
+        "passthrough": "To calculate the total score of all examples labeled 'business,' we need to sum the scores from each entry with the label 'business.' The relevant entries and their scores are as follows:\n\n1. Score 87",
+        "compaction": "To calculate the total score of all examples labeled 'business', we add the scores of the relevant examples:\n\n- Example ID 3: Score 87\n- Example ID 10: Score 73\n- Example ID 13: Score 31\n- Example ID ",
+        "retrieval": "To calculate the total score of all examples labeled 'business', we will sum the scores of each entry with the label 'business'.\n\nHere are the relevant entries:\n\n1. {\"id\": 3, \"score\": 87}\n2. {\"id\": 10",
+        "rlm": "471"
+      }
+    },
+    {
+      "query": "Which label appears most frequently among the examples?",
+      "context_len": 77044,
+      "ground_truth": "sports",
+      "grades": {
+        "passthrough": false,
+        "compaction": false,
+        "retrieval": false,
+        "rlm": true
+      },
+      "best_strategy": "rlm",
+      "features": [
+        11.252144813537598,
+        4.025351524353027,
+        0.07704400271177292,
+        0.10999999940395355,
+        1.0,
+        0.0,
+        0.0,
+        0.5426356792449951,
+        0.2857142984867096,
+        0.2857142984867096
+      ],
+      "costs": {
+        "passthrough": 0.00288435,
+        "compaction": 0.0031206,
+        "retrieval": 0.00323455,
+        "rlm": 0.0040408
+      },
+      "answers": {
+        "passthrough": "The label that appears most frequently among the examples is \"technology.\"",
+        "compaction": "The label that appears most frequently among the examples is \"business.\"",
+        "retrieval": "The label that appears most frequently among the examples is \"technology.\"",
+        "rlm": "sports"
+      }
+    },
+    {
+      "query": "What is the total score of all examples labeled 'technology'?",
+      "context_len": 19115,
+      "ground_truth": "1337",
+      "grades": {
+        "passthrough": false,
+        "compaction": false,
+        "retrieval": false,
+        "rlm": true
+      },
+      "best_strategy": "rlm",
+      "features": [
+        9.858281135559082,
+        4.127134323120117,
+        0.01911499910056591,
+        0.12200000137090683,
+        1.0,
+        0.0,
+        1.0,
+        0.44573643803596497,
+        0.2857142984867096,
+        0.4285714328289032
+      ],
+      "costs": {
+        "passthrough": 0.0008082,
+        "compaction": 0.00105555,
+        "retrieval": 0.0010504,
+        "rlm": 0.006180799999999999
+      },
+      "answers": {
+        "passthrough": "The total score of all examples labeled 'technology' is calculated as follows:\n\n1. 67 (id: 19)\n2. 1 (id: 9)\n3. 36 (id: 30)\n4. 31 (id: 21)\n5. 70 (id: 23)\n6. 29 (id: 50)\n7. 73 (id: 118)\n8. 92 (id: 122)\n",
+        "compaction": "The total score of all examples labeled 'technology' is **1078**.",
+        "retrieval": "To calculate the total score of all examples labeled 'technology', we will sum the scores associated with those entries:\n\n1. Score for ID 19: 67\n2. Score for ID 21: 31\n3. Score for ID 50: 29\n4. Score ",
+        "rlm": "The total score of all examples labeled 'technology' is 1337."
+      }
+    },
+    {
+      "query": "What is the total score of all examples labeled 'technology'?",
+      "context_len": 77024,
+      "ground_truth": "6817",
+      "grades": {
+        "passthrough": false,
+        "compaction": false,
+        "retrieval": false,
+        "rlm": true
+      },
+      "best_strategy": "rlm",
+      "features": [
+        11.251885414123535,
+        4.127134323120117,
+        0.07702399790287018,
+        0.12200000137090683,
+        1.0,
+        0.0,
+        1.0,
+        0.5,
+        0.4285714328289032,
+        0.4285714328289032
+      ],
+      "costs": {
+        "passthrough": 0.00308235,
+        "compaction": 0.00361125,
+        "retrieval": 0.0033423999999999997,
+        "rlm": 0.0033527999999999995
+      },
+      "answers": {
+        "passthrough": "To find the total score of all examples labeled 'technology', we add the scores associated with each 'technology' labeled entry:\n\n- 29\n- 43\n- 42\n- 40\n- 60\n- 48\n- 22\n- 72\n- 12\n- 90\n- 22\n- 64\n- 86\n- 94\n",
+        "compaction": "The total score of all examples labeled 'technology' is **1723**.",
+        "retrieval": "To calculate the total score of all examples labeled 'technology', we need to extract the scores associated with each 'technology' labeled example from the provided text. Here are the relevant scores:",
+        "rlm": "6817"
+      }
+    },
+    {
+      "query": "What is the total score of all examples labeled 'technology'?",
+      "context_len": 4754,
+      "ground_truth": "159",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": true
+      },
+      "best_strategy": "compaction",
+      "features": [
+        8.466952323913574,
+        4.127134323120117,
+        0.004753999877721071,
+        0.12200000137090683,
+        1.0,
+        0.0,
+        1.0,
+        0.4960317313671112,
+        0.4285714328289032,
+        0.2857142984867096
+      ],
+      "costs": {
+        "passthrough": 0.00025485,
+        "compaction": 0.0002532,
+        "retrieval": 0.000442,
+        "rlm": 0.0028376
+      },
+      "answers": {
+        "passthrough": "To calculate the total score of all examples labeled 'technology', we will sum the scores of those specific entries.\n\nHere are the entries with the label 'technology' and their scores:\n\n- Entry 2: sco",
+        "compaction": "To find the total score of all examples labeled 'technology', we will sum the scores of each relevant entry:\n\n1. Score for id 2: 18\n2. Score for id 13: 34\n3. Score for id 19: 14\n4. Score for id 28: 21",
+        "retrieval": "To find the total score of all examples labeled 'technology', we need to identify the scores associated with those entries:\n\n1. Example 2: Score 18\n2. Example 13: Score 34\n3. Example 19: Score 14\n4. E",
+        "rlm": "159"
+      }
+    },
+    {
+      "query": "How many examples have the label 'business'?",
+      "context_len": 19235,
+      "ground_truth": "40",
+      "grades": {
+        "passthrough": false,
+        "compaction": false,
+        "retrieval": false,
+        "rlm": true
+      },
+      "best_strategy": "rlm",
+      "features": [
+        9.86453914642334,
+        3.8066625595092773,
+        0.019235000014305115,
+        0.08799999952316284,
+        1.0,
+        0.0,
+        0.0,
+        0.4901960790157318,
+        0.1666666716337204,
+        0.3333333432674408
+      ],
+      "costs": {
+        "passthrough": 0.0007310999999999999,
+        "compaction": 0.00102525,
+        "retrieval": 0.0009672999999999999,
+        "rlm": 0.0015175999999999998
+      },
+      "answers": {
+        "passthrough": "There are 39 examples with the label 'business'.",
+        "compaction": "There are **36 examples** in the dataset labeled with 'business'.",
+        "retrieval": "There are 20 examples that have the label 'business'.",
+        "rlm": "The number of examples with the 'business' label is 40."
+      }
+    },
+    {
+      "query": "What is the total score of all examples labeled 'technology'?",
+      "context_len": 4745,
+      "ground_truth": "447",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        8.465057373046875,
+        4.127134323120117,
+        0.004745000042021275,
+        0.12200000137090683,
+        1.0,
+        0.0,
+        1.0,
+        0.5791505575180054,
+        0.2857142984867096,
+        0.1428571492433548
+      ],
+      "costs": {
+        "passthrough": 0.00028109999999999995,
+        "compaction": 0.00028125,
+        "retrieval": 0.00046960000000000003,
+        "rlm": 0.007108
+      },
+      "answers": {
+        "passthrough": "To find the total score of all examples labeled 'technology', we will sum the scores of each relevant entry.\n\nHere are the scores for the examples labeled 'technology':\n\n- Example 5: Score = 99\n- Exam",
+        "compaction": "To find the total score of all examples labeled 'technology', we can sum the scores of each entry with that label:\n\n1. Score of id 5: 99\n2. Score of id 6: 1\n3. Score of id 11: 42\n4. Score of id 13: 34",
+        "retrieval": "To calculate the total score of all examples labeled 'technology', we will add the scores from the relevant entries.\n\nThe scores for the entries labeled 'technology' are:\n- Entry 5: score 99\n- Entry 6",
+        "rlm": "The total score across all examples is 2013."
+      }
+    },
+    {
+      "query": "Which label appears most frequently among the examples?",
+      "context_len": 77184,
+      "ground_truth": "sports",
+      "grades": {
+        "passthrough": false,
+        "compaction": false,
+        "retrieval": false,
+        "rlm": true
+      },
+      "best_strategy": "rlm",
+      "features": [
+        11.253960609436035,
+        4.025351524353027,
+        0.07718399912118912,
+        0.10999999940395355,
+        1.0,
+        0.0,
+        0.0,
+        0.5215686559677124,
+        0.2857142984867096,
+        0.2857142984867096
+      ],
+      "costs": {
+        "passthrough": 0.0028853999999999998,
+        "compaction": 0.00303465,
+        "retrieval": 0.00323545,
+        "rlm": 0.0050072
+      },
+      "answers": {
+        "passthrough": "The label that appears most frequently among the examples is \"world.\"",
+        "compaction": "The label that appears most frequently among the examples is **\"world\"**, with **82 occurrences**.",
+        "retrieval": "The label that appears most frequently among the examples is \"world.\"",
+        "rlm": "The label that appears most frequently is: sports"
+      }
+    },
+    {
+      "query": "How many examples have the label 'world'?",
+      "context_len": 18973,
+      "ground_truth": "42",
+      "grades": {
+        "passthrough": false,
+        "compaction": true,
+        "retrieval": false,
+        "rlm": true
+      },
+      "best_strategy": "compaction",
+      "features": [
+        9.850825309753418,
+        3.7376697063446045,
+        0.01897300034761429,
+        0.0820000022649765,
+        1.0,
+        0.0,
+        0.0,
+        0.5490196347236633,
+        0.3333333432674408,
+        0.5
+      ],
+      "costs": {
+        "passthrough": 0.0007243499999999999,
+        "compaction": 0.00123435,
+        "retrieval": 0.0009597499999999999,
+        "rlm": 0.0020672
+      },
+      "answers": {
+        "passthrough": "There are 40 examples with the label 'world'.",
+        "compaction": "There are **42 examples labeled 'world'**.",
+        "retrieval": "There are 21 examples that have the label 'world'.",
+        "rlm": "The number of examples with the label 'world' is: 42"
+      }
+    },
+    {
+      "query": "Which label appears most frequently among the examples?",
+      "context_len": 4732,
+      "ground_truth": "technology",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": true
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        8.46231460571289,
+        4.025351524353027,
+        0.004732000175863504,
+        0.10999999940395355,
+        1.0,
+        0.0,
+        0.0,
+        0.49802371859550476,
+        0.1428571492433548,
+        0.1428571492433548
+      ],
+      "costs": {
+        "passthrough": 0.00018839999999999997,
+        "compaction": 0.00018854999999999998,
+        "retrieval": 0.00037705,
+        "rlm": 0.0028504
+      },
+      "answers": {
+        "passthrough": "The label that appears most frequently among the examples is \"technology.\"",
+        "compaction": "The label that appears most frequently among the examples is \"technology.\"",
+        "retrieval": "The label that appears most frequently among the examples is \"technology.\"",
+        "rlm": "The label that appears most frequently among the examples is: technology"
+      }
+    },
+    {
+      "query": "How many examples have the label 'technology'?",
+      "context_len": 19259,
+      "ground_truth": "42",
+      "grades": {
+        "passthrough": false,
+        "compaction": false,
+        "retrieval": false,
+        "rlm": true
+      },
+      "best_strategy": "rlm",
+      "features": [
+        9.865785598754883,
+        3.8501474857330322,
+        0.019259000197052956,
+        0.09200000017881393,
+        1.0,
+        0.0,
+        0.0,
+        0.4769230782985687,
+        0.5,
+        0.5
+      ],
+      "costs": {
+        "passthrough": 0.0007302,
+        "compaction": 0.0013281,
+        "retrieval": 0.0009631,
+        "rlm": 0.0041256
+      },
+      "answers": {
+        "passthrough": "There are 38 examples with the label 'technology'.",
+        "compaction": "There are a total of **37 entries** labeled with 'technology'.",
+        "retrieval": "There are 25 examples with the label 'technology'.",
+        "rlm": "The number of examples with the 'technology' label is: 42"
+      }
+    },
+    {
+      "query": "Which label appears most frequently among the examples?",
+      "context_len": 76948,
+      "ground_truth": "technology",
+      "grades": {
+        "passthrough": false,
+        "compaction": false,
+        "retrieval": false,
+        "rlm": true
+      },
+      "best_strategy": "rlm",
+      "features": [
+        11.250898361206055,
+        4.025351524353027,
+        0.07694800198078156,
+        0.10999999940395355,
+        1.0,
+        0.0,
+        0.0,
+        0.4501992166042328,
+        0.1428571492433548,
+        0.2857142984867096
+      ],
+      "costs": {
+        "passthrough": 0.0028775999999999997,
+        "compaction": 0.0029898,
+        "retrieval": 0.0032092,
+        "rlm": 0.0029408
+      },
+      "answers": {
+        "passthrough": "The label that appears most frequently among the examples is \"world\".",
+        "compaction": "The label that appears most frequently among the examples is **business.**",
+        "retrieval": "The label \"business\" appears most frequently among the examples.",
+        "rlm": "The label that appears most frequently is: technology"
+      }
+    },
+    {
+      "query": "Which label appears most frequently among the examples?",
+      "context_len": 19129,
+      "ground_truth": "business",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        9.859012603759766,
+        4.025351524353027,
+        0.01912900060415268,
+        0.10999999940395355,
+        1.0,
+        0.0,
+        0.0,
+        0.579365074634552,
+        0.1428571492433548,
+        0.2857142984867096
+      ],
+      "costs": {
+        "passthrough": 0.0007256999999999999,
+        "compaction": 0.00112545,
+        "retrieval": 0.0009584499999999999,
+        "rlm": 0.0865928
+      },
+      "answers": {
+        "passthrough": "The label \"business\" appears most frequently among the examples.",
+        "compaction": "The label that appears most frequently among the examples is **Business**, with a total of 38 occurrences.",
+        "retrieval": "The label that appears most frequently among the examples is \"business.\"",
+        "rlm": "[MAX_ITERATIONS_REACHED]"
+      }
+    },
+    {
+      "query": "How many examples have the label 'world'?",
+      "context_len": 4699,
+      "ground_truth": "10",
+      "grades": {
+        "passthrough": true,
+        "compaction": false,
+        "retrieval": true,
+        "rlm": true
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        8.455317497253418,
+        3.7376697063446045,
+        0.004699000157415867,
+        0.0820000022649765,
+        1.0,
+        0.0,
+        0.0,
+        0.4453125,
+        0.3333333432674408,
+        0.3333333432674408
+      ],
+      "costs": {
+        "passthrough": 0.0001878,
+        "compaction": 0.00018795000000000001,
+        "retrieval": 0.0003778,
+        "rlm": 0.0035208
+      },
+      "answers": {
+        "passthrough": "There are 10 examples with the label 'world'.",
+        "compaction": "There are 11 examples with the label 'world'.",
+        "retrieval": "There are 10 examples with the label 'world'.",
+        "rlm": "The context contains 10 examples with the 'world' label."
+      }
+    },
+    {
+      "query": "Which label appears most frequently among the examples?",
+      "context_len": 19234,
+      "ground_truth": "technology",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        9.864486694335938,
+        4.025351524353027,
+        0.019233999773859978,
+        0.10999999940395355,
+        1.0,
+        0.0,
+        0.0,
+        0.47200000286102295,
+        0.1428571492433548,
+        0.1428571492433548
+      ],
+      "costs": {
+        "passthrough": 0.00073005,
+        "compaction": 0.00090975,
+        "retrieval": 0.00096085,
+        "rlm": 0.06712399999999999
+      },
+      "answers": {
+        "passthrough": "The label that appears most frequently among the examples is \"technology.\"",
+        "compaction": "The label that appears most frequently among the examples is **technology**, with a total of **31 occurrences**.",
+        "retrieval": "The label that appears most frequently among the examples is \"technology.\"",
+        "rlm": "[MAX_ITERATIONS_REACHED]"
+      }
+    },
+    {
+      "query": "Which label appears most frequently among the examples?",
+      "context_len": 76802,
+      "ground_truth": "world",
+      "grades": {
+        "passthrough": false,
+        "compaction": false,
+        "retrieval": true,
+        "rlm": true
+      },
+      "best_strategy": "retrieval",
+      "features": [
+        11.248998641967773,
+        4.025351524353027,
+        0.07680200040340424,
+        0.10999999940395355,
+        1.0,
+        0.0,
+        0.0,
+        0.4738955795764923,
+        0.1428571492433548,
+        0.2857142984867096
+      ],
+      "costs": {
+        "passthrough": 0.0028812,
+        "compaction": 0.0031281,
+        "retrieval": 0.0032315499999999997,
+        "rlm": 0.0056895999999999995
+      },
+      "answers": {
+        "passthrough": "The label that appears most frequently among the examples is \"business.\"",
+        "compaction": "The label that appears most frequently among the examples is **business**, with a total of **121 occurrences**.",
+        "retrieval": "The label that appears most frequently among the examples is \"world.\"",
+        "rlm": "The most frequent label is: world"
+      }
+    },
+    {
+      "query": "What is the total score of all examples labeled 'technology'?",
+      "context_len": 77216,
+      "ground_truth": "7640",
+      "grades": {
+        "passthrough": false,
+        "compaction": false,
+        "retrieval": false,
+        "rlm": true
+      },
+      "best_strategy": "rlm",
+      "features": [
+        11.254374504089355,
+        4.127134323120117,
+        0.0772159993648529,
+        0.12200000137090683,
+        1.0,
+        0.0,
+        1.0,
+        0.52173912525177,
+        0.4285714328289032,
+        0.4285714328289032
+      ],
+      "costs": {
+        "passthrough": 0.0031136999999999996,
+        "compaction": 0.00335595,
+        "retrieval": 0.0033535,
+        "rlm": 0.0020943999999999997
+      },
+      "answers": {
+        "passthrough": "To calculate the total score of all examples labeled 'technology', we will sum the scores for each entry with the 'technology' label from the provided dataset.\n\nHere's the list of scores for the 'tech",
+        "compaction": "The total score of all examples labeled 'technology' is **1782**.",
+        "retrieval": "To calculate the total score of all examples labeled 'technology', we will sum the scores of each labeled 'technology' example provided in the text:\n\n1. Score 95\n2. Score 16\n3. Score 3\n4. Score 36\n5. ",
+        "rlm": "The total score of all examples labeled 'technology' is: 7640"
+      }
+    },
+    {
+      "query": "Which label appears most frequently among the examples?",
+      "context_len": 4718,
+      "ground_truth": "world",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": false
+      },
+      "best_strategy": "compaction",
+      "features": [
+        8.459352493286133,
+        4.025351524353027,
+        0.004718000069260597,
+        0.10999999940395355,
+        1.0,
+        0.0,
+        0.0,
+        0.47011953592300415,
+        0.2857142984867096,
+        0.2857142984867096
+      ],
+      "costs": {
+        "passthrough": 0.0001881,
+        "compaction": 0.00018764999999999998,
+        "retrieval": 0.0003772,
+        "rlm": 0.005147199999999999
+      },
+      "answers": {
+        "passthrough": "The label that appears most frequently among the examples is \"world.\"",
+        "compaction": "The label that appears most frequently among the examples is \"world.\"",
+        "retrieval": "The label that appears most frequently among the examples is \"world.\"",
+        "rlm": "The label that appears most frequently among the examples is: sports"
+      }
+    },
+    {
+      "query": "Which label appears most frequently among the examples?",
+      "context_len": 4792,
+      "ground_truth": "sports",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": true
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        8.4749116897583,
+        4.025351524353027,
+        0.004792000167071819,
+        0.10999999940395355,
+        1.0,
+        0.0,
+        0.0,
+        0.5136186480522156,
+        0.1428571492433548,
+        0.1428571492433548
+      ],
+      "costs": {
+        "passthrough": 0.00019125,
+        "compaction": 0.00019199999999999998,
+        "retrieval": 0.00038365000000000003,
+        "rlm": 0.0029264
+      },
+      "answers": {
+        "passthrough": "The label that appears most frequently among the examples is \"sports.\"",
+        "compaction": "The label that appears most frequently among the examples is \"sports.\"",
+        "retrieval": "The label that appears most frequently among the examples is \"sports.\"",
+        "rlm": "The label that appears most frequently among the examples is: sports"
+      }
+    },
+    {
+      "query": "What is the total score of all examples labeled 'sports'?",
+      "context_len": 77107,
+      "ground_truth": "6815",
+      "grades": {
+        "passthrough": false,
+        "compaction": false,
+        "retrieval": false,
+        "rlm": true
+      },
+      "best_strategy": "rlm",
+      "features": [
+        11.252962112426758,
+        4.060442924499512,
+        0.07710699737071991,
+        0.11400000005960464,
+        1.0,
+        0.0,
+        1.0,
+        0.49803921580314636,
+        0.4285714328289032,
+        0.4285714328289032
+      ],
+      "costs": {
+        "passthrough": 0.0031654499999999998,
+        "compaction": 0.0034454999999999998,
+        "retrieval": 0.00339265,
+        "rlm": 0.0018487999999999998
+      },
+      "answers": {
+        "passthrough": "To calculate the total score of all examples labeled 'sports', we need to sum the scores of each entry with the label 'sports'. Below are the scores for each entry labeled 'sports':\n\n1. 81\n2. 60\n3. 75",
+        "compaction": "The total score of all examples labeled 'sports' is **1937**.",
+        "retrieval": "To calculate the total score of all examples labeled 'sports', we can sum the individual scores corresponding to each entry. Here are the scores for those entries:\n\n- Entry 35: 28\n- Entry 38: 98\n- Ent",
+        "rlm": "The total score of all 'sports' examples is: 6815.0"
+      }
+    },
+    {
+      "query": "Which label appears most frequently among the examples?",
+      "context_len": 4671,
+      "ground_truth": "business",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": true
+      },
+      "best_strategy": "compaction",
+      "features": [
+        8.449342727661133,
+        4.025351524353027,
+        0.0046709999442100525,
+        0.10999999940395355,
+        1.0,
+        0.0,
+        0.0,
+        0.5714285969734192,
+        0.2857142984867096,
+        0.1428571492433548
+      ],
+      "costs": {
+        "passthrough": 0.00018795,
+        "compaction": 0.0001875,
+        "retrieval": 0.0003763,
+        "rlm": 0.005437599999999999
+      },
+      "answers": {
+        "passthrough": "The label that appears most frequently among the examples is \"business.\"",
+        "compaction": "The label that appears most frequently among the examples is \"business.\"",
+        "retrieval": "The label that appears most frequently among the examples is \"business.\"",
+        "rlm": "business"
+      }
+    },
+    {
+      "query": "What is the total score of all examples labeled 'sports'?",
+      "context_len": 19195,
+      "ground_truth": "1340",
+      "grades": {
+        "passthrough": false,
+        "compaction": false,
+        "retrieval": false,
+        "rlm": true
+      },
+      "best_strategy": "rlm",
+      "features": [
+        9.862457275390625,
+        4.060442924499512,
+        0.01919499970972538,
+        0.11400000005960464,
+        1.0,
+        0.0,
+        1.0,
+        0.5,
+        0.4285714328289032,
+        0.4285714328289032
+      ],
+      "costs": {
+        "passthrough": 0.0009098999999999999,
+        "compaction": 0.00132855,
+        "retrieval": 0.0010924,
+        "rlm": 0.0022832
+      },
+      "answers": {
+        "passthrough": "To find the total score of all examples labeled 'sports', we will sum up the scores for each relevant example:\n\n- Example 6: score 63\n- Example 7: score 74\n- Example 10: score 89\n- Example 11: score 7",
+        "compaction": "The total score of all examples labeled 'sports' is **1285**.",
+        "retrieval": "To find the total score of all examples labeled 'sports', we will sum the scores of each entry labeled 'sports' from the provided data:\n\n- Example 10: score = 89\n- Example 12: score = 55\n- Example 14:",
+        "rlm": "1340.0"
+      }
+    },
+    {
+      "query": "Which label appears most frequently among the examples?",
+      "context_len": 4715,
+      "ground_truth": "sports",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": false
+      },
+      "best_strategy": "compaction",
+      "features": [
+        8.45871639251709,
+        4.025351524353027,
+        0.0047149998135864735,
+        0.10999999940395355,
+        1.0,
+        0.0,
+        0.0,
+        0.5465116500854492,
+        0.2857142984867096,
+        0.1428571492433548
+      ],
+      "costs": {
+        "passthrough": 0.00018974999999999998,
+        "compaction": 0.0001893,
+        "retrieval": 0.00038035,
+        "rlm": 0.11587279999999998
+      },
+      "answers": {
+        "passthrough": "The label that appears most frequently among the examples is \"sports.\"",
+        "compaction": "The label that appears most frequently among the examples is \"sports.\"",
+        "retrieval": "The label that appears most frequently among the examples is \"sports.\"",
+        "rlm": "[MAX_ITERATIONS_REACHED]"
+      }
+    },
+    {
+      "query": "What is the total score of all examples labeled 'world'?",
+      "context_len": 19126,
+      "ground_truth": "1207",
+      "grades": {
+        "passthrough": false,
+        "compaction": true,
+        "retrieval": false,
+        "rlm": true
+      },
+      "best_strategy": "compaction",
+      "features": [
+        9.858856201171875,
+        4.043051242828369,
+        0.01912599988281727,
+        0.1120000034570694,
+        1.0,
+        0.0,
+        1.0,
+        0.5494071245193481,
+        0.4285714328289032,
+        0.4285714328289032
+      ],
+      "costs": {
+        "passthrough": 0.00086775,
+        "compaction": 0.0013779,
+        "retrieval": 0.0010229500000000001,
+        "rlm": 0.0030672
+      },
+      "answers": {
+        "passthrough": "To calculate the total score of all examples labeled 'world', we need to sum the scores of each entry that has the label 'world':\n\n- Score for id 6: 85\n- Score for id 8: 41\n- Score for id 9: 49\n- Scor",
+        "compaction": "The total score of all examples labeled 'world' is **1207**.",
+        "retrieval": "To find the total score of all examples labeled 'world', we first identify the scores associated with each entry having the label 'world':\n\n1. Score for id 18: 14\n2. Score for id 19: 27\n3. Score for i",
+        "rlm": "1207"
+      }
+    },
+    {
+      "query": "Which label appears most frequently among the examples?",
+      "context_len": 19075,
+      "ground_truth": "business",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": true
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        9.856185913085938,
+        4.025351524353027,
+        0.019075000658631325,
+        0.10999999940395355,
+        1.0,
+        0.0,
+        0.0,
+        0.4630350172519684,
+        0.2857142984867096,
+        0.2857142984867096
+      ],
+      "costs": {
+        "passthrough": 0.00072885,
+        "compaction": 0.0009322499999999999,
+        "retrieval": 0.0009637999999999999,
+        "rlm": 0.0026568
+      },
+      "answers": {
+        "passthrough": "The label that appears most frequently among the examples is \"business.\"",
+        "compaction": "The label that appears most frequently among the examples is **\"business,\"** with a total of **55 occurrences.**",
+        "retrieval": "The label that appears most frequently among the examples is \"business.\"",
+        "rlm": "The label that appears most frequently among the examples is: business"
+      }
+    },
+    {
+      "query": "How many examples have the label 'sports'?",
+      "context_len": 19097,
+      "ground_truth": "45",
+      "grades": {
+        "passthrough": false,
+        "compaction": false,
+        "retrieval": false,
+        "rlm": true
+      },
+      "best_strategy": "rlm",
+      "features": [
+        9.857338905334473,
+        3.761200189590454,
+        0.01909700036048889,
+        0.08399999886751175,
+        1.0,
+        0.0,
+        0.0,
+        0.48605579137802124,
+        0.5,
+        0.5
+      ],
+      "costs": {
+        "passthrough": 0.0007281,
+        "compaction": 0.0009102,
+        "retrieval": 0.00095915,
+        "rlm": 0.0021647999999999997
+      },
+      "answers": {
+        "passthrough": "There are 58 examples with the label 'sports'.",
+        "compaction": "There are **34 entries** labeled with 'sports'.",
+        "retrieval": "There are 32 examples with the label 'sports'.",
+        "rlm": "The number of examples with the 'sports' label is: 45"
+      }
+    },
+    {
+      "query": "How many examples have the label 'business'?",
+      "context_len": 76984,
+      "ground_truth": "145",
+      "grades": {
+        "passthrough": false,
+        "compaction": false,
+        "retrieval": false,
+        "rlm": true
+      },
+      "best_strategy": "rlm",
+      "features": [
+        11.251365661621094,
+        3.8066625595092773,
+        0.07698400318622589,
+        0.08799999952316284,
+        1.0,
+        0.0,
+        0.0,
+        0.4367816150188446,
+        0.5,
+        0.5
+      ],
+      "costs": {
+        "passthrough": 0.0028926,
+        "compaction": 0.0042346499999999995,
+        "retrieval": 0.00324775,
+        "rlm": 0.0018704
+      },
+      "answers": {
+        "passthrough": "There are a total of 140 examples with the label 'business'.",
+        "compaction": "There are **49** examples with the label \"business.\"",
+        "retrieval": "There are 15 examples that have the label 'business'.",
+        "rlm": "The number of examples with the 'business' label is: 145"
+      }
+    },
+    {
+      "query": "Which label appears most frequently among the examples?",
+      "context_len": 77025,
+      "ground_truth": "business",
+      "grades": {
+        "passthrough": false,
+        "compaction": false,
+        "retrieval": false,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        11.251898765563965,
+        4.025351524353027,
+        0.07702499628067017,
+        0.10999999940395355,
+        1.0,
+        0.0,
+        0.0,
+        0.546875,
+        0.2857142984867096,
+        0.2857142984867096
+      ],
+      "costs": {
+        "passthrough": 0.0028775999999999997,
+        "compaction": 0.00301335,
+        "retrieval": 0.00322705,
+        "rlm": 0.1298048
+      },
+      "answers": {
+        "passthrough": "The label that appears most frequently among the examples is \"technology.\"",
+        "compaction": "The label that appears most frequently among the examples is **Technology**, with 167 occurrences.",
+        "retrieval": "The label \"technology\" appears most frequently among the examples provided.",
+        "rlm": "[MAX_ITERATIONS_REACHED]"
+      }
+    }
+  ]
+}

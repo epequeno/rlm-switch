@@ -1,0 +1,98 @@
+{
+  "summary": {
+    "task": "dense_aggregation",
+    "n_examples": 2,
+    "oracle_accuracy": 0.5,
+    "per_strategy_acc": {
+      "passthrough": 0.5,
+      "compaction": 0.5,
+      "retrieval": 0.5,
+      "rlm": 0.0
+    },
+    "strategy_wins": {
+      "passthrough": 2,
+      "compaction": 0,
+      "retrieval": 0,
+      "rlm": 0
+    },
+    "oracle_gain": 0.125,
+    "all_wrong_count": 1,
+    "context_lengths": [
+      4000
+    ]
+  },
+  "records": [
+    {
+      "query": "How many examples have the label 'business'?",
+      "context_len": 3904,
+      "ground_truth": "7",
+      "grades": {
+        "passthrough": false,
+        "compaction": false,
+        "retrieval": false,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        8.270012855529785,
+        3.8066625595092773,
+        0.003903999924659729,
+        0.08799999952316284,
+        1.0,
+        0.0,
+        0.0,
+        0.5051546096801758,
+        0.1666666716337204,
+        0.1666666716337204
+      ],
+      "costs": {
+        "passthrough": 0.00013095,
+        "compaction": 0.00013110000000000002,
+        "retrieval": 0.0002516,
+        "rlm": 0.0006168
+      },
+      "answers": {
+        "passthrough": "There are 8 examples that have the label 'business'.",
+        "compaction": "There are 8 examples that have the label 'business'.",
+        "retrieval": "There are 8 examples with the label 'business'.",
+        "rlm": "The context contains 0 examples with the 'business' label."
+      }
+    },
+    {
+      "query": "Which label appears most frequently among the examples?",
+      "context_len": 3873,
+      "ground_truth": "world",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        8.262042999267578,
+        4.025351524353027,
+        0.003872999921441078,
+        0.10999999940395355,
+        1.0,
+        0.0,
+        0.0,
+        0.5384615659713745,
+        0.2857142984867096,
+        0.2857142984867096
+      ],
+      "costs": {
+        "passthrough": 0.00012915,
+        "compaction": 0.0001293,
+        "retrieval": 0.00024845,
+        "rlm": 0.00276
+      },
+      "answers": {
+        "passthrough": "The label that appears most frequently among the examples is \"world.\"",
+        "compaction": "The label that appears most frequently among the examples is \"world.\"",
+        "retrieval": "The label that appears most frequently among the examples is \"world.\"",
+        "rlm": "No labels found in the provided context."
+      }
+    }
+  ]
+}

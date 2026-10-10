@@ -1,0 +1,1827 @@
+{
+  "summary": {
+    "n_examples": 50,
+    "oracle_accuracy": 1.0,
+    "per_strategy_acc": {
+      "passthrough": 1.0,
+      "compaction": 1.0,
+      "retrieval": 0.98,
+      "rlm": 0.44
+    },
+    "strategy_wins": {
+      "passthrough": 38,
+      "compaction": 3,
+      "retrieval": 0,
+      "rlm": 9
+    },
+    "oracle_gain": 0.145,
+    "all_wrong_count": 0,
+    "context_lengths": [
+      4000,
+      16000,
+      64000
+    ]
+  },
+  "records": [
+    {
+      "query": "What is the hidden password?",
+      "context_len": 4001,
+      "ground_truth": "BlueMoon_99!",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": true
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        8.294549942016602,
+        3.367295742034912,
+        0.004000999964773655,
+        0.0560000017285347,
+        1.0,
+        0.0,
+        1.0,
+        0.1899999976158142,
+        0.0,
+        0.0
+      ],
+      "costs": {
+        "passthrough": 0.00012465,
+        "compaction": 0.0001248,
+        "retrieval": 0.00025534999999999995,
+        "rlm": 0.00035025
+      },
+      "answers": {
+        "passthrough": "The hidden password is: BlueMoon_99!",
+        "compaction": "The hidden password is: BlueMoon_99!.",
+        "retrieval": "The hidden password is: BlueMoon_99!",
+        "rlm": "BlueMoon_99!"
+      }
+    },
+    {
+      "query": "What is the hidden password?",
+      "context_len": 4001,
+      "ground_truth": "BlueMoon_99!",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": true
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        8.294549942016602,
+        3.367295742034912,
+        0.004000999964773655,
+        0.0560000017285347,
+        1.0,
+        0.0,
+        1.0,
+        0.17981073260307312,
+        0.0,
+        0.0
+      ],
+      "costs": {
+        "passthrough": 0.0001278,
+        "compaction": 0.00012795,
+        "retrieval": 0.00026164999999999994,
+        "rlm": 0.0007630499999999999
+      },
+      "answers": {
+        "passthrough": "The hidden password is: BlueMoon_99!",
+        "compaction": "The hidden password is: BlueMoon_99!.",
+        "retrieval": "The hidden password is: BlueMoon_99!",
+        "rlm": "BlueMoon_99!"
+      }
+    },
+    {
+      "query": "What is the target value?",
+      "context_len": 64002,
+      "ground_truth": "1.618033988",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        11.066685676574707,
+        3.25809645652771,
+        0.06400199979543686,
+        0.05000000074505806,
+        1.0,
+        0.0,
+        1.0,
+        0.1958041936159134,
+        0.0,
+        0.0
+      ],
+      "costs": {
+        "passthrough": 0.00187515,
+        "compaction": 0.0018923999999999998,
+        "retrieval": 0.002228,
+        "rlm": 0.00082215
+      },
+      "answers": {
+        "passthrough": "The target value is: 1.618033988.",
+        "compaction": "The target value is **1.618033988**.",
+        "retrieval": "The target value is 1.618033988.",
+        "rlm": "<0 degrees Celsius, 299,792 kilometers per second, 21,000 kilometers>"
+      }
+    },
+    {
+      "query": "What is the override command?",
+      "context_len": 16001,
+      "ground_truth": "ENGAGE_OVERRIDE_DELTA",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": true
+      },
+      "best_strategy": "rlm",
+      "features": [
+        9.680468559265137,
+        3.4011974334716797,
+        0.01600099913775921,
+        0.057999998331069946,
+        1.0,
+        0.0,
+        1.0,
+        0.194888174533844,
+        0.5,
+        0.5
+      ],
+      "costs": {
+        "passthrough": 0.00048029999999999997,
+        "compaction": 0.0004959,
+        "retrieval": 0.0006893,
+        "rlm": 0.00021014999999999999
+      },
+      "answers": {
+        "passthrough": "The override command is: ENGAGE_OVERRIDE_DELTA.",
+        "compaction": "The override command is **ENGAGE_OVERRIDE_DELTA**.",
+        "retrieval": "The override command is: ENGAGE_OVERRIDE_DELTA.",
+        "rlm": "ENGAGE_OVERRIDE_DELTA"
+      }
+    },
+    {
+      "query": "What is the target value?",
+      "context_len": 64002,
+      "ground_truth": "1.618033988",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        11.066685676574707,
+        3.25809645652771,
+        0.06400199979543686,
+        0.05000000074505806,
+        1.0,
+        0.0,
+        1.0,
+        0.17538461089134216,
+        0.0,
+        0.0
+      ],
+      "costs": {
+        "passthrough": 0.0018873,
+        "compaction": 0.0019045499999999999,
+        "retrieval": 0.00224345,
+        "rlm": 0.0046504499999999995
+      },
+      "answers": {
+        "passthrough": "The target value is: 1.618033988.",
+        "compaction": "The target value is **1.618033988**.",
+        "retrieval": "The target value is: 1.618033988.",
+        "rlm": "[MAX_ITERATIONS]"
+      }
+    },
+    {
+      "query": "What is the meeting time?",
+      "context_len": 16002,
+      "ground_truth": "3:47 PM on Thursday",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        9.68053150177002,
+        3.25809645652771,
+        0.016001999378204346,
+        0.05000000074505806,
+        1.0,
+        0.0,
+        1.0,
+        0.18627451360225677,
+        0.0,
+        0.0
+      ],
+      "costs": {
+        "passthrough": 0.0004788,
+        "compaction": 0.00049305,
+        "retrieval": 0.0006866,
+        "rlm": 3.929999999999999e-05
+      },
+      "answers": {
+        "passthrough": "The meeting time is 3:47 PM on Thursday.",
+        "compaction": "The meeting time is 3:47 PM on Thursday.",
+        "retrieval": "The meeting time is 3:47 PM on Thursday.",
+        "rlm": "I'm sorry, but I do not have information about the meeting time. Please provide more context or specify the meeting you're referring to."
+      }
+    },
+    {
+      "query": "What is the target value?",
+      "context_len": 4001,
+      "ground_truth": "1.618033988",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": true
+      },
+      "best_strategy": "compaction",
+      "features": [
+        8.294549942016602,
+        3.25809645652771,
+        0.004000999964773655,
+        0.05000000074505806,
+        1.0,
+        0.0,
+        1.0,
+        0.1818181872367859,
+        0.0,
+        0.0
+      ],
+      "costs": {
+        "passthrough": 0.0001338,
+        "compaction": 0.00013335,
+        "retrieval": 0.00026705,
+        "rlm": 0.00047505
+      },
+      "answers": {
+        "passthrough": "The target value is approximately 1.618033988, which is known as the golden ratio.",
+        "compaction": "The target value is 1.618033988, which is known as the golden ratio.",
+        "retrieval": "The target value is approximately 1.618033988, which is known as the golden ratio.",
+        "rlm": "The target value is the mathematical constant known as the golden ratio, approximately equal to 1.618033988."
+      }
+    },
+    {
+      "query": "What is the target value?",
+      "context_len": 4001,
+      "ground_truth": "1.618033988",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": true
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        8.294549942016602,
+        3.25809645652771,
+        0.004000999964773655,
+        0.05000000074505806,
+        1.0,
+        0.0,
+        1.0,
+        0.18627451360225677,
+        0.0,
+        0.0
+      ],
+      "costs": {
+        "passthrough": 0.0001341,
+        "compaction": 0.00013485,
+        "retrieval": 0.00026915,
+        "rlm": 0.0003201
+      },
+      "answers": {
+        "passthrough": "The target value is 1.618033988, which is known as the golden ratio.",
+        "compaction": "The target value is approximately 1.618033988, which is known as the golden ratio.",
+        "retrieval": "The target value is approximately 1.618033988, which is known as the golden ratio.",
+        "rlm": "1.618033988, the mathematical constant known as the golden ratio"
+      }
+    },
+    {
+      "query": "What is the answer to quiz?",
+      "context_len": 16002,
+      "ground_truth": "forty-two",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        9.68053150177002,
+        3.332204580307007,
+        0.016001999378204346,
+        0.05400000140070915,
+        1.0,
+        0.0,
+        1.0,
+        0.20779220759868622,
+        0.6666666865348816,
+        0.6666666865348816
+      ],
+      "costs": {
+        "passthrough": 0.00048149999999999994,
+        "compaction": 0.0007498499999999999,
+        "retrieval": 0.0006851,
+        "rlm": 0.0014663999999999999
+      },
+      "answers": {
+        "passthrough": "The answer to the quiz is: forty-two.",
+        "compaction": "The answer to the quiz is **forty-two**.",
+        "retrieval": "The answer to the quiz is: forty-two.",
+        "rlm": "[MAX_ITERATIONS]"
+      }
+    },
+    {
+      "query": "What is the target value?",
+      "context_len": 4002,
+      "ground_truth": "1.618033988",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        8.2947998046875,
+        3.25809645652771,
+        0.004002000205218792,
+        0.05000000074505806,
+        1.0,
+        0.0,
+        1.0,
+        0.18269230425357819,
+        0.0,
+        0.0
+      ],
+      "costs": {
+        "passthrough": 0.00012945,
+        "compaction": 0.0001344,
+        "retrieval": 0.000269,
+        "rlm": 0.00079155
+      },
+      "answers": {
+        "passthrough": "The target value is approximately 1.618033988.",
+        "compaction": "The target value is approximately 1.618033988, which is known as the golden ratio.",
+        "retrieval": "The target value is approximately 1.618033988, which is known as the Golden Ratio.",
+        "rlm": "1"
+      }
+    },
+    {
+      "query": "What is the special token?",
+      "context_len": 64001,
+      "ground_truth": "TOKEN-ALPHA-9",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        11.066669464111328,
+        3.295836925506592,
+        0.06400100141763687,
+        0.052000001072883606,
+        1.0,
+        0.0,
+        1.0,
+        0.2060810774564743,
+        0.5,
+        0.5
+      ],
+      "costs": {
+        "passthrough": 0.00188055,
+        "compaction": 0.0020718,
+        "retrieval": 0.0022466,
+        "rlm": 0.00014655
+      },
+      "answers": {
+        "passthrough": "The special token is: TOKEN-ALPHA-9.",
+        "compaction": "The special token is **TOKEN-ALPHA-9**.",
+        "retrieval": "The special token is: TOKEN-ALPHA-9.",
+        "rlm": "Special tokens are unique symbols or sequences in natural language processing that serve specific purposes, such as indicating sentence boundaries, representing unknown words, or denoting padding in s"
+      }
+    },
+    {
+      "query": "What is the hidden password?",
+      "context_len": 4001,
+      "ground_truth": "BlueMoon_99!",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": true
+      },
+      "best_strategy": "rlm",
+      "features": [
+        8.294549942016602,
+        3.367295742034912,
+        0.004000999964773655,
+        0.0560000017285347,
+        1.0,
+        0.0,
+        1.0,
+        0.19365079700946808,
+        0.5,
+        0.5
+      ],
+      "costs": {
+        "passthrough": 0.0001272,
+        "compaction": 0.00012735,
+        "retrieval": 0.00026164999999999994,
+        "rlm": 0.00011009999999999999
+      },
+      "answers": {
+        "passthrough": "The hidden password is: BlueMoon_99!",
+        "compaction": "The hidden password is: BlueMoon_99!",
+        "retrieval": "The hidden password is: BlueMoon_99!",
+        "rlm": "BlueMoon_99!"
+      }
+    },
+    {
+      "query": "What is the hidden password?",
+      "context_len": 16002,
+      "ground_truth": "BlueMoon_99!",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        9.68053150177002,
+        3.367295742034912,
+        0.016001999378204346,
+        0.0560000017285347,
+        1.0,
+        0.0,
+        1.0,
+        0.1875,
+        0.0,
+        0.0
+      ],
+      "costs": {
+        "passthrough": 0.00048239999999999996,
+        "compaction": 0.00049785,
+        "retrieval": 0.00068045,
+        "rlm": 0.00151455
+      },
+      "answers": {
+        "passthrough": "The hidden password is: BlueMoon_99!",
+        "compaction": "The hidden password is: **BlueMoon_99!**",
+        "retrieval": "The hidden password is: BlueMoon_99!",
+        "rlm": "No clear password found in the context"
+      }
+    },
+    {
+      "query": "What is the target value?",
+      "context_len": 64002,
+      "ground_truth": "1.618033988",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        11.066685676574707,
+        3.25809645652771,
+        0.06400199979543686,
+        0.05000000074505806,
+        1.0,
+        0.0,
+        1.0,
+        0.19063545763492584,
+        0.0,
+        0.0
+      ],
+      "costs": {
+        "passthrough": 0.0018814499999999998,
+        "compaction": 0.0021645,
+        "retrieval": 0.0022508,
+        "rlm": 0.0006366
+      },
+      "answers": {
+        "passthrough": "The target value is: 1.618033988.",
+        "compaction": "The target value is **1.618033988**, which is known as the **Golden Ratio**.",
+        "retrieval": "The target value is 1.618033988.",
+        "rlm": "N/A"
+      }
+    },
+    {
+      "query": "What is the meeting time?",
+      "context_len": 16001,
+      "ground_truth": "3:47 PM on Thursday",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        9.680468559265137,
+        3.25809645652771,
+        0.01600099913775921,
+        0.05000000074505806,
+        1.0,
+        0.0,
+        1.0,
+        0.1881188154220581,
+        0.0,
+        0.0
+      ],
+      "costs": {
+        "passthrough": 0.0004785,
+        "compaction": 0.0004929,
+        "retrieval": 0.0006780499999999999,
+        "rlm": 0.0018928499999999997
+      },
+      "answers": {
+        "passthrough": "The meeting time is 3:47 PM on Thursday.",
+        "compaction": "The meeting time is 3:47 PM on Thursday.",
+        "retrieval": "The meeting time is 3:47 PM on Thursday.",
+        "rlm": "No meeting time found in the context."
+      }
+    },
+    {
+      "query": "What is the special token?",
+      "context_len": 64002,
+      "ground_truth": "TOKEN-ALPHA-9",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        11.066685676574707,
+        3.295836925506592,
+        0.06400199979543686,
+        0.052000001072883606,
+        1.0,
+        0.0,
+        1.0,
+        0.18421052396297455,
+        0.0,
+        0.0
+      ],
+      "costs": {
+        "passthrough": 0.0018811499999999998,
+        "compaction": 0.0019004999999999998,
+        "retrieval": 0.0022415,
+        "rlm": 0.0002646
+      },
+      "answers": {
+        "passthrough": "The special token is: TOKEN-ALPHA-9.",
+        "compaction": "The special token is **TOKEN-ALPHA-9**.",
+        "retrieval": "The special token is: TOKEN-ALPHA-9.",
+        "rlm": "The term \"special token\" can refer to different concepts depending on the context, especially in natural language processing (NLP) and programming. In NLP, special tokens are used in models like BERT "
+      }
+    },
+    {
+      "query": "What is the special token?",
+      "context_len": 16002,
+      "ground_truth": "TOKEN-ALPHA-9",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        9.68053150177002,
+        3.295836925506592,
+        0.016001999378204346,
+        0.052000001072883606,
+        1.0,
+        0.0,
+        1.0,
+        0.18481847643852234,
+        0.0,
+        0.0
+      ],
+      "costs": {
+        "passthrough": 0.00047505,
+        "compaction": 0.0005664,
+        "retrieval": 0.00067715,
+        "rlm": 0.00015555
+      },
+      "answers": {
+        "passthrough": "The special token is: TOKEN-ALPHA-9.",
+        "compaction": "The special token is **TOKEN-ALPHA-9**.",
+        "retrieval": "The special token is: TOKEN-ALPHA-9.",
+        "rlm": "Special tokens are unique symbols or words reserved for specific functions in programming or natural language processing, such as indicating the beginning or end of sequences, padding, or marking enti"
+      }
+    },
+    {
+      "query": "What is the answer to quiz?",
+      "context_len": 64002,
+      "ground_truth": "forty-two",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        11.066685676574707,
+        3.332204580307007,
+        0.06400199979543686,
+        0.05400000140070915,
+        1.0,
+        0.0,
+        1.0,
+        0.18421052396297455,
+        0.3333333432674408,
+        0.3333333432674408
+      ],
+      "costs": {
+        "passthrough": 0.0018972,
+        "compaction": 0.0019535999999999998,
+        "retrieval": 0.00226475,
+        "rlm": 0.00188295
+      },
+      "answers": {
+        "passthrough": "The answer to the quiz is: forty-two.",
+        "compaction": "The answer to the quiz is \"forty-two.\"",
+        "retrieval": "The answer to the quiz is: forty-two.",
+        "rlm": "[MAX_ITERATIONS]"
+      }
+    },
+    {
+      "query": "What is the secret code?",
+      "context_len": 64002,
+      "ground_truth": "ZEPHYR-7742",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": false,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        11.066685676574707,
+        3.2188758850097656,
+        0.06400199979543686,
+        0.04800000041723251,
+        1.0,
+        0.0,
+        1.0,
+        0.18210862576961517,
+        0.0,
+        0.0
+      ],
+      "costs": {
+        "passthrough": 0.0018879,
+        "compaction": 0.00210825,
+        "retrieval": 0.0023732000000000002,
+        "rlm": 0.00143625
+      },
+      "answers": {
+        "passthrough": "The secret code is: ZEPHYR-7742.",
+        "compaction": "The secret code is **ZEPHYR-7742**.",
+        "retrieval": "The secret code appears to be a collection of repeated facts and information from the provided context regarding various subjects. However, if the request is to decipher a specific pattern or extract ",
+        "rlm": "7742"
+      }
+    },
+    {
+      "query": "What is the secret code?",
+      "context_len": 64002,
+      "ground_truth": "ZEPHYR-7742",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": true
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        11.066685676574707,
+        3.2188758850097656,
+        0.06400199979543686,
+        0.04800000041723251,
+        1.0,
+        0.0,
+        1.0,
+        0.18627451360225677,
+        0.0,
+        0.0
+      ],
+      "costs": {
+        "passthrough": 0.0018936,
+        "compaction": 0.00197505,
+        "retrieval": 0.0022586,
+        "rlm": 0.0022142999999999998
+      },
+      "answers": {
+        "passthrough": "The secret code is: ZEPHYR-7742.",
+        "compaction": "The secret code is: **ZEPHYR-7742**.",
+        "retrieval": "The secret code is: ZEPHYR-7742.",
+        "rlm": "ZEPHYR-7742"
+      }
+    },
+    {
+      "query": "What is the answer to quiz?",
+      "context_len": 16002,
+      "ground_truth": "forty-two",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        9.68053150177002,
+        3.332204580307007,
+        0.016001999378204346,
+        0.05400000140070915,
+        1.0,
+        0.0,
+        1.0,
+        0.18627451360225677,
+        0.3333333432674408,
+        0.3333333432674408
+      ],
+      "costs": {
+        "passthrough": 0.0004764,
+        "compaction": 0.0007366499999999999,
+        "retrieval": 0.0006788,
+        "rlm": 0.0018891
+      },
+      "answers": {
+        "passthrough": "The answer to the quiz is: forty-two.",
+        "compaction": "The answer to the quiz is \"forty-two.\"",
+        "retrieval": "The answer to the quiz is: forty-two.",
+        "rlm": "[MAX_ITERATIONS]"
+      }
+    },
+    {
+      "query": "What is the meeting time?",
+      "context_len": 64002,
+      "ground_truth": "3:47 PM on Thursday",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        11.066685676574707,
+        3.25809645652771,
+        0.06400199979543686,
+        0.05000000074505806,
+        1.0,
+        0.0,
+        1.0,
+        0.19512194395065308,
+        0.0,
+        0.0
+      ],
+      "costs": {
+        "passthrough": 0.0018772499999999998,
+        "compaction": 0.00189225,
+        "retrieval": 0.0022517,
+        "rlm": 0.0022945500000000002
+      },
+      "answers": {
+        "passthrough": "The meeting time is 3:47 PM on Thursday.",
+        "compaction": "The meeting time is 3:47 PM on Thursday.",
+        "retrieval": "The meeting time is 3:47 PM on Thursday.",
+        "rlm": "No information regarding meeting time found in the context."
+      }
+    },
+    {
+      "query": "What is the override command?",
+      "context_len": 64002,
+      "ground_truth": "ENGAGE_OVERRIDE_DELTA",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        11.066685676574707,
+        3.4011974334716797,
+        0.06400199979543686,
+        0.057999998331069946,
+        1.0,
+        0.0,
+        1.0,
+        0.17891374230384827,
+        0.0,
+        0.0
+      ],
+      "costs": {
+        "passthrough": 0.0018741,
+        "compaction": 0.0018903,
+        "retrieval": 0.00223865,
+        "rlm": 0.00041655
+      },
+      "answers": {
+        "passthrough": "The override command is: ENGAGE_OVERRIDE_DELTA.",
+        "compaction": "The override command is: **ENGAGE_OVERRIDE_DELTA**.",
+        "retrieval": "The override command is: ENGAGE_OVERRIDE_DELTA.",
+        "rlm": "Please provide the context or details surrounding your inquiry about the override command for a more accurate response."
+      }
+    },
+    {
+      "query": "What is the treasure location?",
+      "context_len": 16001,
+      "ground_truth": "under the old oak tree by the river bend",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        9.680468559265137,
+        3.4339871406555176,
+        0.01600099913775921,
+        0.05999999865889549,
+        1.0,
+        0.0,
+        1.0,
+        0.17378048598766327,
+        0.0,
+        0.0
+      ],
+      "costs": {
+        "passthrough": 0.00048209999999999995,
+        "compaction": 0.000498,
+        "retrieval": 0.00068705,
+        "rlm": 0.00051105
+      },
+      "answers": {
+        "passthrough": "The treasure location is under the old oak tree by the river bend.",
+        "compaction": "The treasure location is under the old oak tree by the river bend.",
+        "retrieval": "The treasure location is under the old oak tree by the river bend.",
+        "rlm": "No specific treasure location found in the context."
+      }
+    },
+    {
+      "query": "What is the meeting time?",
+      "context_len": 16001,
+      "ground_truth": "3:47 PM on Thursday",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        9.680468559265137,
+        3.25809645652771,
+        0.01600099913775921,
+        0.05000000074505806,
+        1.0,
+        0.0,
+        1.0,
+        0.17891374230384827,
+        0.0,
+        0.0
+      ],
+      "costs": {
+        "passthrough": 0.00047985,
+        "compaction": 0.000495,
+        "retrieval": 0.0006854,
+        "rlm": 3.75e-05
+      },
+      "answers": {
+        "passthrough": "The meeting time is 3:47 PM on Thursday.",
+        "compaction": "The meeting time is 3:47 PM on Thursday.",
+        "retrieval": "The meeting time is 3:47 PM on Thursday.",
+        "rlm": "I'm sorry, but I don't have access to specific meeting times as that information is not available in the context provided."
+      }
+    },
+    {
+      "query": "What is the hidden password?",
+      "context_len": 64001,
+      "ground_truth": "BlueMoon_99!",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": true
+      },
+      "best_strategy": "rlm",
+      "features": [
+        11.066669464111328,
+        3.367295742034912,
+        0.06400100141763687,
+        0.0560000017285347,
+        1.0,
+        0.0,
+        1.0,
+        0.17610062658786774,
+        0.0,
+        0.0
+      ],
+      "costs": {
+        "passthrough": 0.00189045,
+        "compaction": 0.0019083,
+        "retrieval": 0.0022429999999999998,
+        "rlm": 0.00036525
+      },
+      "answers": {
+        "passthrough": "The hidden password is: BlueMoon_99!.",
+        "compaction": "The hidden password is: **BlueMoon_99!**",
+        "retrieval": "The hidden password is: BlueMoon_99!.",
+        "rlm": "BlueMoon_99!"
+      }
+    },
+    {
+      "query": "What is the meeting time?",
+      "context_len": 64001,
+      "ground_truth": "3:47 PM on Thursday",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        11.066669464111328,
+        3.25809645652771,
+        0.06400100141763687,
+        0.05000000074505806,
+        1.0,
+        0.0,
+        1.0,
+        0.1881188154220581,
+        0.0,
+        0.0
+      ],
+      "costs": {
+        "passthrough": 0.0018938999999999998,
+        "compaction": 0.0019104,
+        "retrieval": 0.0022539500000000002,
+        "rlm": 0.00059295
+      },
+      "answers": {
+        "passthrough": "The meeting time is 3:47 PM on Thursday.",
+        "compaction": "The meeting time is **3:47 PM on Thursday**.",
+        "retrieval": "The meeting time is 3:47 PM on Thursday.",
+        "rlm": "No specific meeting time found in the context."
+      }
+    },
+    {
+      "query": "What is the secret code?",
+      "context_len": 4001,
+      "ground_truth": "ZEPHYR-7742",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": true
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        8.294549942016602,
+        3.2188758850097656,
+        0.004000999964773655,
+        0.04800000041723251,
+        1.0,
+        0.0,
+        1.0,
+        0.1986970752477646,
+        0.5,
+        0.5
+      ],
+      "costs": {
+        "passthrough": 0.00012915,
+        "compaction": 0.0001293,
+        "retrieval": 0.00026165,
+        "rlm": 0.0005674499999999999
+      },
+      "answers": {
+        "passthrough": "The secret code is: ZEPHYR-7742.",
+        "compaction": "The secret code is: ZEPHYR-7742.",
+        "retrieval": "The secret code is: ZEPHYR-7742.",
+        "rlm": "ZEPHYR-7742"
+      }
+    },
+    {
+      "query": "What is the meeting time?",
+      "context_len": 64001,
+      "ground_truth": "3:47 PM on Thursday",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        11.066669464111328,
+        3.25809645652771,
+        0.06400100141763687,
+        0.05000000074505806,
+        1.0,
+        0.0,
+        1.0,
+        0.20512820780277252,
+        0.5,
+        0.5
+      ],
+      "costs": {
+        "passthrough": 0.0018989999999999999,
+        "compaction": 0.0019132499999999998,
+        "retrieval": 0.0022745,
+        "rlm": 3.81e-05
+      },
+      "answers": {
+        "passthrough": "The meeting time is 3:47 PM on Thursday.",
+        "compaction": "The meeting time is 3:47 PM on Thursday.",
+        "retrieval": "The meeting time is 3:47 PM on Thursday.",
+        "rlm": "I'm sorry, but I cannot access current or specific meeting information. Please check your calendar or meeting invitation for the details."
+      }
+    },
+    {
+      "query": "What is the override command?",
+      "context_len": 4001,
+      "ground_truth": "ENGAGE_OVERRIDE_DELTA",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": true
+      },
+      "best_strategy": "rlm",
+      "features": [
+        8.294549942016602,
+        3.4011974334716797,
+        0.004000999964773655,
+        0.057999998331069946,
+        1.0,
+        0.0,
+        1.0,
+        0.20469798147678375,
+        0.5,
+        0.5
+      ],
+      "costs": {
+        "passthrough": 0.00012465,
+        "compaction": 0.0001248,
+        "retrieval": 0.0002543,
+        "rlm": 0.00011204999999999999
+      },
+      "answers": {
+        "passthrough": "The override command is: ENGAGE_OVERRIDE_DELTA.",
+        "compaction": "The override command is: ENGAGE_OVERRIDE_DELTA.",
+        "retrieval": "The override command is: ENGAGE_OVERRIDE_DELTA.",
+        "rlm": "ENGAGE_OVERRIDE_DELTA"
+      }
+    },
+    {
+      "query": "What is the answer to quiz?",
+      "context_len": 16002,
+      "ground_truth": "forty-two",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": true
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        9.68053150177002,
+        3.332204580307007,
+        0.016001999378204346,
+        0.05400000140070915,
+        1.0,
+        0.0,
+        1.0,
+        0.1899999976158142,
+        0.3333333432674408,
+        0.6666666865348816
+      ],
+      "costs": {
+        "passthrough": 0.0004785,
+        "compaction": 0.00066045,
+        "retrieval": 0.00068255,
+        "rlm": 0.00068835
+      },
+      "answers": {
+        "passthrough": "The answer to the quiz is: forty-two.",
+        "compaction": "The answer to the quiz is: **forty-two**.",
+        "retrieval": "The answer to the quiz is: forty-two.",
+        "rlm": "forty-two"
+      }
+    },
+    {
+      "query": "What is the treasure location?",
+      "context_len": 4002,
+      "ground_truth": "under the old oak tree by the river bend",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        8.2947998046875,
+        3.4339871406555176,
+        0.004002000205218792,
+        0.05999999865889549,
+        1.0,
+        0.0,
+        1.0,
+        0.1801242232322693,
+        0.5,
+        0.0
+      ],
+      "costs": {
+        "passthrough": 0.00013035,
+        "compaction": 0.00013049999999999997,
+        "retrieval": 0.00026524999999999997,
+        "rlm": 0.00068355
+      },
+      "answers": {
+        "passthrough": "The treasure location is under the old oak tree by the river bend.",
+        "compaction": "The treasure location is under the old oak tree by the river bend.",
+        "retrieval": "The treasure location is under the old oak tree by the river bend.",
+        "rlm": "No treasure location found in the context"
+      }
+    },
+    {
+      "query": "What is the target value?",
+      "context_len": 4002,
+      "ground_truth": "1.618033988",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": true
+      },
+      "best_strategy": "compaction",
+      "features": [
+        8.2947998046875,
+        3.25809645652771,
+        0.004002000205218792,
+        0.05000000074505806,
+        1.0,
+        0.0,
+        1.0,
+        0.17230768501758575,
+        0.0,
+        0.0
+      ],
+      "costs": {
+        "passthrough": 0.0001299,
+        "compaction": 0.00012945,
+        "retrieval": 0.00027095,
+        "rlm": 0.00061035
+      },
+      "answers": {
+        "passthrough": "The target value is: 1.618033988.",
+        "compaction": "The target value is 1.618033988.",
+        "retrieval": "The target value is approximately 1.618033988, which is known as the golden ratio.",
+        "rlm": "1.618033988"
+      }
+    },
+    {
+      "query": "What is the treasure location?",
+      "context_len": 4001,
+      "ground_truth": "under the old oak tree by the river bend",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": false
+      },
+      "best_strategy": "compaction",
+      "features": [
+        8.294549942016602,
+        3.4339871406555176,
+        0.004000999964773655,
+        0.05999999865889549,
+        1.0,
+        0.0,
+        1.0,
+        0.17337460815906525,
+        0.0,
+        0.0
+      ],
+      "costs": {
+        "passthrough": 0.00013199999999999998,
+        "compaction": 0.00013154999999999997,
+        "retrieval": 0.0002693,
+        "rlm": 0.00045
+      },
+      "answers": {
+        "passthrough": "The treasure location is: under the old oak tree by the river bend.",
+        "compaction": "The treasure location is under the old oak tree by the river bend.",
+        "retrieval": "The treasure location is: under the old oak tree by the river bend.",
+        "rlm": "under the old oak tree"
+      }
+    },
+    {
+      "query": "What is the answer to quiz?",
+      "context_len": 64001,
+      "ground_truth": "forty-two",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        11.066669464111328,
+        3.332204580307007,
+        0.06400100141763687,
+        0.05400000140070915,
+        1.0,
+        0.0,
+        1.0,
+        0.1930379718542099,
+        0.6666666865348816,
+        0.6666666865348816
+      ],
+      "costs": {
+        "passthrough": 0.0018892499999999999,
+        "compaction": 0.0020846999999999997,
+        "retrieval": 0.0022545499999999997,
+        "rlm": 0.0014390999999999998
+      },
+      "answers": {
+        "passthrough": "The answer to the quiz is forty-two.",
+        "compaction": "The answer to the quiz is **forty-two**.",
+        "retrieval": "The answer to the quiz is: forty-two.",
+        "rlm": "[MAX_ITERATIONS]"
+      }
+    },
+    {
+      "query": "What is the hidden password?",
+      "context_len": 4002,
+      "ground_truth": "BlueMoon_99!",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": true
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        8.2947998046875,
+        3.367295742034912,
+        0.004002000205218792,
+        0.0560000017285347,
+        1.0,
+        0.0,
+        1.0,
+        0.1895424872636795,
+        0.5,
+        0.0
+      ],
+      "costs": {
+        "passthrough": 0.000129,
+        "compaction": 0.00012915,
+        "retrieval": 0.00026509999999999994,
+        "rlm": 0.00114165
+      },
+      "answers": {
+        "passthrough": "The hidden password is: BlueMoon_99!",
+        "compaction": "The hidden password is: BlueMoon_99!",
+        "retrieval": "The hidden password is: BlueMoon_99!",
+        "rlm": "BlueMoon_99!"
+      }
+    },
+    {
+      "query": "What is the target value?",
+      "context_len": 4001,
+      "ground_truth": "1.618033988",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": true
+      },
+      "best_strategy": "rlm",
+      "features": [
+        8.294549942016602,
+        3.25809645652771,
+        0.004000999964773655,
+        0.05000000074505806,
+        1.0,
+        0.0,
+        1.0,
+        0.18633539974689484,
+        0.5,
+        0.5
+      ],
+      "costs": {
+        "passthrough": 0.00013094999999999998,
+        "compaction": 0.0001311,
+        "retrieval": 0.00026809999999999996,
+        "rlm": 0.00011265
+      },
+      "answers": {
+        "passthrough": "The target value is 1.618033988.",
+        "compaction": "The target value is 1.618033988.",
+        "retrieval": "The target value is: 1.618033988.",
+        "rlm": "1.618033988"
+      }
+    },
+    {
+      "query": "What is the special token?",
+      "context_len": 16002,
+      "ground_truth": "TOKEN-ALPHA-9",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        9.68053150177002,
+        3.295836925506592,
+        0.016001999378204346,
+        0.052000001072883606,
+        1.0,
+        0.0,
+        1.0,
+        0.17701862752437592,
+        0.0,
+        0.0
+      ],
+      "costs": {
+        "passthrough": 0.0004836,
+        "compaction": 0.0007017,
+        "retrieval": 0.0006801499999999999,
+        "rlm": 0.0003759
+      },
+      "answers": {
+        "passthrough": "The special token is: TOKEN-ALPHA-9.",
+        "compaction": "The special token is **TOKEN-ALPHA-9**.",
+        "retrieval": "The special token is: TOKEN-ALPHA-9.",
+        "rlm": "No specific information about a special token was found in the context."
+      }
+    },
+    {
+      "query": "What is the hidden password?",
+      "context_len": 16002,
+      "ground_truth": "BlueMoon_99!",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": true
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        9.68053150177002,
+        3.367295742034912,
+        0.016001999378204346,
+        0.0560000017285347,
+        1.0,
+        0.0,
+        1.0,
+        0.1899999976158142,
+        0.0,
+        0.5
+      ],
+      "costs": {
+        "passthrough": 0.00047775,
+        "compaction": 0.0004932,
+        "retrieval": 0.0006791000000000001,
+        "rlm": 0.00063255
+      },
+      "answers": {
+        "passthrough": "The hidden password is: BlueMoon_99!",
+        "compaction": "The hidden password is: **BlueMoon_99!**",
+        "retrieval": "The hidden password is: BlueMoon_99!",
+        "rlm": "BlueMoon_99!"
+      }
+    },
+    {
+      "query": "What is the hidden password?",
+      "context_len": 4001,
+      "ground_truth": "BlueMoon_99!",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": true
+      },
+      "best_strategy": "rlm",
+      "features": [
+        8.294549942016602,
+        3.367295742034912,
+        0.004000999964773655,
+        0.0560000017285347,
+        1.0,
+        0.0,
+        1.0,
+        0.17419354617595673,
+        0.5,
+        0.5
+      ],
+      "costs": {
+        "passthrough": 0.00012945,
+        "compaction": 0.0001296,
+        "retrieval": 0.00026689999999999993,
+        "rlm": 9.915e-05
+      },
+      "answers": {
+        "passthrough": "The hidden password is: BlueMoon_99!",
+        "compaction": "The hidden password is: BlueMoon_99!",
+        "retrieval": "The hidden password is: BlueMoon_99!",
+        "rlm": "BlueMoon_99!"
+      }
+    },
+    {
+      "query": "What is the treasure location?",
+      "context_len": 16001,
+      "ground_truth": "under the old oak tree by the river bend",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        9.680468559265137,
+        3.4339871406555176,
+        0.01600099913775921,
+        0.05999999865889549,
+        1.0,
+        0.0,
+        1.0,
+        0.18327973783016205,
+        0.0,
+        0.0
+      ],
+      "costs": {
+        "passthrough": 0.00048734999999999995,
+        "compaction": 0.000504,
+        "retrieval": 0.00069605,
+        "rlm": 0.0005028
+      },
+      "answers": {
+        "passthrough": "The treasure location is under the old oak tree by the river bend.",
+        "compaction": "The treasure location is under the old oak tree by the river bend.",
+        "retrieval": "The treasure location is: under the old oak tree by the river bend.",
+        "rlm": "under the old oak"
+      }
+    },
+    {
+      "query": "What is the treasure location?",
+      "context_len": 64001,
+      "ground_truth": "under the old oak tree by the river bend",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": true
+      },
+      "best_strategy": "rlm",
+      "features": [
+        11.066669464111328,
+        3.4339871406555176,
+        0.06400100141763687,
+        0.05999999865889549,
+        1.0,
+        0.0,
+        1.0,
+        0.2149837166070938,
+        0.5,
+        0.5
+      ],
+      "costs": {
+        "passthrough": 0.00190005,
+        "compaction": 0.00191805,
+        "retrieval": 0.0022694,
+        "rlm": 0.0001116
+      },
+      "answers": {
+        "passthrough": "The treasure location is under the old oak tree by the river bend.",
+        "compaction": "The treasure location is under the old oak tree by the river bend.",
+        "retrieval": "The treasure location is: under the old oak tree by the river bend.",
+        "rlm": "under the old oak tree by the river bend"
+      }
+    },
+    {
+      "query": "What is the secret code?",
+      "context_len": 4002,
+      "ground_truth": "ZEPHYR-7742",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": true
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        8.2947998046875,
+        3.2188758850097656,
+        0.004002000205218792,
+        0.04800000041723251,
+        1.0,
+        0.0,
+        1.0,
+        0.19344262778759003,
+        0.5,
+        0.0
+      ],
+      "costs": {
+        "passthrough": 0.0001314,
+        "compaction": 0.00013155,
+        "retrieval": 0.00026689999999999993,
+        "rlm": 0.000636
+      },
+      "answers": {
+        "passthrough": "The secret code is: ZEPHYR-7742.",
+        "compaction": "The secret code is: ZEPHYR-7742.",
+        "retrieval": "The secret code is: ZEPHYR-7742.",
+        "rlm": "ZEPHYR-7742"
+      }
+    },
+    {
+      "query": "What is the treasure location?",
+      "context_len": 16002,
+      "ground_truth": "under the old oak tree by the river bend",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": true
+      },
+      "best_strategy": "rlm",
+      "features": [
+        9.68053150177002,
+        3.4339871406555176,
+        0.016001999378204346,
+        0.05999999865889549,
+        1.0,
+        0.0,
+        1.0,
+        0.1856677532196045,
+        0.0,
+        0.0
+      ],
+      "costs": {
+        "passthrough": 0.00048405,
+        "compaction": 0.00050205,
+        "retrieval": 0.0006889999999999999,
+        "rlm": 0.00034409999999999996
+      },
+      "answers": {
+        "passthrough": "The treasure location is under the old oak tree by the river bend.",
+        "compaction": "The treasure location is under the old oak tree by the river bend.",
+        "retrieval": "The treasure location is under the old oak tree by the river bend.",
+        "rlm": "under the old oak tree by the river bend."
+      }
+    },
+    {
+      "query": "What is the hidden password?",
+      "context_len": 16002,
+      "ground_truth": "BlueMoon_99!",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": true
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        9.68053150177002,
+        3.367295742034912,
+        0.016001999378204346,
+        0.0560000017285347,
+        1.0,
+        0.0,
+        1.0,
+        0.17665615677833557,
+        0.0,
+        0.0
+      ],
+      "costs": {
+        "passthrough": 0.00047804999999999994,
+        "compaction": 0.00049365,
+        "retrieval": 0.00067805,
+        "rlm": 0.0009849
+      },
+      "answers": {
+        "passthrough": "The hidden password is: BlueMoon_99!",
+        "compaction": "The hidden password is: **BlueMoon_99!**",
+        "retrieval": "The hidden password is: BlueMoon_99!",
+        "rlm": "BlueMoon_99!"
+      }
+    },
+    {
+      "query": "What is the treasure location?",
+      "context_len": 16001,
+      "ground_truth": "under the old oak tree by the river bend",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": true
+      },
+      "best_strategy": "rlm",
+      "features": [
+        9.680468559265137,
+        3.4339871406555176,
+        0.01600099913775921,
+        0.05999999865889549,
+        1.0,
+        0.0,
+        1.0,
+        0.21221864223480225,
+        0.5,
+        0.5
+      ],
+      "costs": {
+        "passthrough": 0.00048554999999999996,
+        "compaction": 0.0005013,
+        "retrieval": 0.0006959,
+        "rlm": 0.00010664999999999999
+      },
+      "answers": {
+        "passthrough": "The treasure location is under the old oak tree by the river bend.",
+        "compaction": "The treasure location is under the old oak tree by the river bend.",
+        "retrieval": "The treasure location is under the old oak tree by the river bend.",
+        "rlm": "under the old oak tree by the river bend"
+      }
+    },
+    {
+      "query": "What is the treasure location?",
+      "context_len": 64002,
+      "ground_truth": "under the old oak tree by the river bend",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        11.066685676574707,
+        3.4339871406555176,
+        0.06400199979543686,
+        0.05999999865889549,
+        1.0,
+        0.0,
+        1.0,
+        0.18688525259494781,
+        0.0,
+        0.0
+      ],
+      "costs": {
+        "passthrough": 0.0018911999999999998,
+        "compaction": 0.0019071000000000001,
+        "retrieval": 0.0022535,
+        "rlm": 0.00083805
+      },
+      "answers": {
+        "passthrough": "The treasure location is: under the old oak tree by the river bend.",
+        "compaction": "The treasure location is under the old oak tree by the river bend.",
+        "retrieval": "The treasure location is under the old oak tree by the river bend.",
+        "rlm": "Under the old oak tree"
+      }
+    },
+    {
+      "query": "What is the special token?",
+      "context_len": 4002,
+      "ground_truth": "TOKEN-ALPHA-9",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": true
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        8.2947998046875,
+        3.295836925506592,
+        0.004002000205218792,
+        0.052000001072883606,
+        1.0,
+        0.0,
+        1.0,
+        0.18831168115139008,
+        0.5,
+        0.0
+      ],
+      "costs": {
+        "passthrough": 0.0001269,
+        "compaction": 0.00012705,
+        "retrieval": 0.00025774999999999995,
+        "rlm": 0.0004905
+      },
+      "answers": {
+        "passthrough": "The special token is: TOKEN-ALPHA-9.",
+        "compaction": "The special token is: TOKEN-ALPHA-9.",
+        "retrieval": "The special token is: TOKEN-ALPHA-9.",
+        "rlm": "TOKEN-ALPHA-9"
+      }
+    },
+    {
+      "query": "What is the target value?",
+      "context_len": 64002,
+      "ground_truth": "1.618033988",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        11.066685676574707,
+        3.25809645652771,
+        0.06400199979543686,
+        0.05000000074505806,
+        1.0,
+        0.0,
+        1.0,
+        0.17592592537403107,
+        0.0,
+        0.0
+      ],
+      "costs": {
+        "passthrough": 0.00188415,
+        "compaction": 0.0019021499999999998,
+        "retrieval": 0.00225005,
+        "rlm": 0.00071715
+      },
+      "answers": {
+        "passthrough": "The target value is 1.618033988.",
+        "compaction": "The target value is **1.618033988**.",
+        "retrieval": "The target value is approximately 1.618033988, which is known as the golden ratio.",
+        "rlm": "21,000 or 299,792"
+      }
+    },
+    {
+      "query": "What is the secret code?",
+      "context_len": 64001,
+      "ground_truth": "ZEPHYR-7742",
+      "grades": {
+        "passthrough": true,
+        "compaction": true,
+        "retrieval": true,
+        "rlm": false
+      },
+      "best_strategy": "passthrough",
+      "features": [
+        11.066669464111328,
+        3.2188758850097656,
+        0.06400100141763687,
+        0.04800000041723251,
+        1.0,
+        0.0,
+        1.0,
+        0.18481847643852234,
+        0.0,
+        0.0
+      ],
+      "costs": {
+        "passthrough": 0.00188685,
+        "compaction": 0.0019046999999999998,
+        "retrieval": 0.00224225,
+        "rlm": 0.0005334
+      },
+      "answers": {
+        "passthrough": "The secret code is: ZEPHYR-7742.",
+        "compaction": "The secret code is: **ZEPHYR-7742.**",
+        "retrieval": "The secret code is: ZEPHYR-7742.",
+        "rlm": "No information about the secret code is present in the context."
+      }
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "n_total": 50,
+  "n_train": 40,
+  "n_val": 10,
+  "val_accuracy": 0.4,
+  "cv_accuracy": 0.6,
+  "cv_std": 0.1095,
+  "majority_accuracy_cv": 0.48,
+  "rule_based_accuracy_cv": 0.18,
+  "oracle_accuracy": 1.0,
+  "label_distribution": {
+    "passthrough": 16,
+    "compaction": 8,
+    "retrieval": 2,
+    "rlm": 24
+  },
+  "majority_class": "rlm",
+  "feature_importance": {
+    "passthrough": {
+      "log_context_len": -0.2147,
+      "log_query_len": 0.3135,
+      "context_scale": -0.0466,
+      "norm_query_len": 0.0298,
+      "is_question": 0.0002,
+      "is_list_query": 0.0,
+      "is_specific_lookup": -0.7134,
+      "context_entropy": -0.0828,
+      "query_density": -0.5131,
+      "answer_locality": -0.4741
+    },
+    "compaction": {
+      "log_context_len": -0.8309,
+      "log_query_len": 0.3177,
+      "context_scale": -0.021,
+      "norm_query_len": 0.032,
+      "is_question": -0.0001,
+      "is_list_query": 0.0,
+      "is_specific_lookup": 0.6182,
+      "context_entropy": 0.1473,
+      "query_density": 0.2701,
+      "answer_locality": 0.1612
+    },
+    "retrieval": {
+      "log_context_len": 0.1954,
+      "log_query_len": -0.1197,
+      "context_scale": 0.0258,
+      "norm_query_len": -0.012,
+      "is_question": -0.0002,
+      "is_list_query": 0.0,
+      "is_specific_lookup": -0.2704,
+      "context_entropy": -0.0463,
+      "query_density": -0.249,
+      "answer_locality": -0.184
+    },
+    "rlm": {
+      "log_context_len": 0.8502,
+      "log_query_len": -0.5116,
+      "context_scale": 0.0417,
+      "norm_query_len": -0.0499,
+      "is_question": 0.0,
+      "is_list_query": 0.0,
+      "is_specific_lookup": 0.3655,
+      "context_entropy": -0.0182,
+      "query_density": 0.4921,
+      "answer_locality": 0.4968
+    }
+  }
+}
